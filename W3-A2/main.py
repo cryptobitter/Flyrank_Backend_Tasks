@@ -1,9 +1,9 @@
 """
-Stage 2: Read and Create endpoints (GET /tasks, GET /tasks/{id}, POST /tasks).
+Stage 3: Full CRUD endpoints (GET, POST, PUT, DELETE) backed by SQLite.
 """
 
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Response
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 import database
@@ -56,3 +56,42 @@ async def create_task_endpoint(request: Request):
 
     created = database.create_task(title=title.strip(), done=done)
     return JSONResponse(status_code=201, content=created)
+
+
+@app.put("/tasks/{task_id}")
+async def update_task_endpoint(task_id: int, request: Request):
+    try:
+        body = await request.json()
+    except Exception:
+        return JSONResponse(status_code=400, content={"error": "Invalid JSON body"})
+
+    if not isinstance(body, dict) or ("title" not in body and "done" not in body):
+        return JSONResponse(
+            status_code=400,
+            content={"error": "Request body must provide 'title' and/or 'done'"},
+        )
+
+    existing = database.get_task_by_id(task_id)
+    if existing is None:
+        return JSONResponse(status_code=404, content={"error": "Task not found"})
+
+    title = body.get("title", existing["title"])
+    done = body.get("done", existing["done"])
+
+    if not isinstance(title, str) or not title.strip():
+        return JSONResponse(status_code=400, content={"error": "Title must be a non-empty string"})
+    if not isinstance(done, bool):
+        return JSONResponse(status_code=400, content={"error": "Field 'done' must be a boolean"})
+
+    updated = database.update_task(task_id=task_id, title=title.strip(), done=done)
+    if updated is None:
+        return JSONResponse(status_code=404, content={"error": "Task not found"})
+    return updated
+
+
+@app.delete("/tasks/{task_id}", status_code=204)
+def delete_task_endpoint(task_id: int):
+    deleted = database.delete_task(task_id)
+    if not deleted:
+        return JSONResponse(status_code=404, content={"error": "Task not found"})
+    return Response(status_code=204)

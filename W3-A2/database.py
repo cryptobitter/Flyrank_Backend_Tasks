@@ -1,5 +1,5 @@
 """
-Stage 2: SQLite database layer with read and create queries (INSERT INTO tasks).
+Stage 3: Complete CRUD SQLite database layer (SELECT, INSERT, UPDATE, DELETE).
 """
 
 import os
@@ -93,5 +93,38 @@ def create_task(title: str, done: bool = False, db_path: str | None = None) -> d
             new_id = cursor.lastrowid
             row = conn.execute("SELECT * FROM tasks WHERE id = ?", (new_id,)).fetchone()
             return row_to_dict(row)
+    finally:
+        conn.close()
+
+
+def update_task(
+    task_id: int,
+    title: str,
+    done: bool,
+    db_path: str | None = None,
+) -> dict[str, Any] | None:
+    """Update a task row using parameterized UPDATE tasks SET title = ?, done = ? WHERE id = ?."""
+    conn = get_connection(db_path)
+    try:
+        with conn:
+            cursor = conn.execute(
+                "UPDATE tasks SET title = ?, done = ? WHERE id = ?",
+                (title, 1 if done else 0, task_id),
+            )
+            if cursor.rowcount == 0:
+                return None
+            row = conn.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
+            return row_to_dict(row) if row is not None else None
+    finally:
+        conn.close()
+
+
+def delete_task(task_id: int, db_path: str | None = None) -> bool:
+    """Delete a task row using parameterized DELETE FROM tasks WHERE id = ?."""
+    conn = get_connection(db_path)
+    try:
+        with conn:
+            cursor = conn.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
+            return cursor.rowcount > 0
     finally:
         conn.close()
