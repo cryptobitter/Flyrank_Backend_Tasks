@@ -1,0 +1,15 @@
+# SQLite database file (created automatically on startup so each clone starts fresh)
+tasks.db
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.pytest_cache/
