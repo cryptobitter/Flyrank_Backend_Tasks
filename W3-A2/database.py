@@ -1,9 +1,10 @@
 """
-Stage 0: Create SQLite database (tasks.db), tasks table, and seed initial tasks once.
+Stage 1: SQLite database layer with read queries (GET /tasks and GET /tasks/{id}).
 """
 
 import os
 import sqlite3
+from typing import Any
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.environ.get("TASKS_DB_PATH", os.path.join(BASE_DIR, "tasks.db"))
@@ -21,6 +22,13 @@ def get_connection(db_path: str | None = None) -> sqlite3.Connection:
     conn = sqlite3.connect(target_path)
     conn.row_factory = sqlite3.Row
     return conn
+
+
+def row_to_dict(row: sqlite3.Row) -> dict[str, Any]:
+    """Convert a sqlite3.Row into a task dictionary with boolean 'done'."""
+    data = dict(row)
+    data["done"] = bool(data["done"])
+    return data
 
 
 def init_db(db_path: str | None = None) -> None:
@@ -47,5 +55,27 @@ def init_db(db_path: str | None = None) -> None:
                     "INSERT INTO tasks (title, done) VALUES (?, ?)",
                     SEED_TASKS,
                 )
+    finally:
+        conn.close()
+
+
+def get_all_tasks(db_path: str | None = None) -> list[dict[str, Any]]:
+    """Return every task from the database using SELECT * FROM tasks."""
+    conn = get_connection(db_path)
+    try:
+        cursor = conn.execute("SELECT * FROM tasks")
+        rows = cursor.fetchall()
+        return [row_to_dict(row) for row in rows]
+    finally:
+        conn.close()
+
+
+def get_task_by_id(task_id: int, db_path: str | None = None) -> dict[str, Any] | None:
+    """Fetch a single task by id using a parameterized query placeholder (?)."""
+    conn = get_connection(db_path)
+    try:
+        cursor = conn.execute("SELECT * FROM tasks WHERE id = ?", (task_id,))
+        row = cursor.fetchone()
+        return row_to_dict(row) if row is not None else None
     finally:
         conn.close()
