@@ -1,5 +1,5 @@
 """
-Stage 1: SQLite database layer with read queries (GET /tasks and GET /tasks/{id}).
+Stage 2: SQLite database layer with read and create queries (INSERT INTO tasks).
 """
 
 import os
@@ -77,5 +77,21 @@ def get_task_by_id(task_id: int, db_path: str | None = None) -> dict[str, Any] |
         cursor = conn.execute("SELECT * FROM tasks WHERE id = ?", (task_id,))
         row = cursor.fetchone()
         return row_to_dict(row) if row is not None else None
+    finally:
+        conn.close()
+
+
+def create_task(title: str, done: bool = False, db_path: str | None = None) -> dict[str, Any]:
+    """Insert a new task row using parameterized INSERT INTO tasks (title, done) VALUES (?, ?)."""
+    conn = get_connection(db_path)
+    try:
+        with conn:
+            cursor = conn.execute(
+                "INSERT INTO tasks (title, done) VALUES (?, ?)",
+                (title, 1 if done else 0),
+            )
+            new_id = cursor.lastrowid
+            row = conn.execute("SELECT * FROM tasks WHERE id = ?", (new_id,)).fetchone()
+            return row_to_dict(row)
     finally:
         conn.close()
