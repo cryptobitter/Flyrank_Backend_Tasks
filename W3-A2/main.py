@@ -1,5 +1,7 @@
 """
-Stage 3: Full CRUD endpoints (GET, POST, PUT, DELETE) backed by SQLite.
+W3 · A2 — Connecting Your CRUD to the Database (FastAPI + SQLite)
+Exposes the exact same CRUD endpoints as Assignment 1 (GET /tasks, GET /tasks/{id},
+POST /tasks, PUT /tasks/{id}, DELETE /tasks/{id}) plus optional query filters and GET /stats.
 """
 
 from contextlib import asynccontextmanager
@@ -23,9 +25,37 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     return JSONResponse(status_code=400, content={"error": "Invalid request parameters or body"})
 
 
+def _parse_bool_query(value: str | None) -> tuple[bool | None, bool]:
+    """Parse ?done=true/false query parameter. Returns (parsed_bool, is_valid)."""
+    if value is None:
+        return None, True
+    lowered = value.strip().lower()
+    if lowered in ("true", "1", "yes"):
+        return True, True
+    if lowered in ("false", "0", "no"):
+        return False, True
+    return None, False
+
+
 @app.get("/tasks")
-def read_tasks():
-    return database.get_all_tasks()
+def read_tasks(
+    search: str | None = None,
+    done: str | None = None,
+    sort: str | None = None,
+):
+    parsed_done, is_valid = _parse_bool_query(done)
+    if not is_valid:
+        return JSONResponse(
+            status_code=400,
+            content={"error": "Query parameter 'done' must be 'true' or 'false'"},
+        )
+    return database.get_all_tasks(search=search, done=parsed_done, sort=sort)
+
+
+@app.get("/stats")
+def read_stats():
+    """Optional Extra: Return task counts using SQL COUNT(*)."""
+    return database.get_task_stats()
 
 
 @app.get("/tasks/{task_id}")
