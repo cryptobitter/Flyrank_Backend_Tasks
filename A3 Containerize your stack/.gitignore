@@ -1,0 +1,14 @@
+# Environment variables (contains real database credentials — never commit!)
+.env
+
+# Python bytecode & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.pytest_cache/
+
+# Local SQLite or temporary test files
+*.db
