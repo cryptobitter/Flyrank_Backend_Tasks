@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backend Architecture Portfolio · Identity Kit &amp; Content Map (Week 3)</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --text: #0F172A;
+      --surface: #1E293B;
+      --accent: #0D9488;
+      --border: #E2E8F0;
+      --muted: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .label-mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 700;
+      max-width: 24ch;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.3;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    p {
+      max-width: 65ch;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      margin-top: 16px;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      background: #E2E8F0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <img src="./assets/favicon.svg" alt="Terminal Monogram Favicon" />
+        <span>Backend Systems · Portfolio Frame</span>
+      </a>
+      <a class="cta-btn" href="#walkthrough">Book a 15-Min Walkthrough</a>
+    </header>
+
+    <section style="padding-bottom: 48px;">
+      <span class="label-mono">One-Line Claim · Hero Value Proposition</span>
+      <h1>I build containerized Python backends where routes stay five lines long and data survives any restart.</h1>
+      <p>
+        Built for Engineering Leads and Technical Founders at early-stage B2B SaaS startups who want clean repository separation, parameterized SQL, and reproducible Docker stacks instead of fragile prototypes.
+      </p>
+      <a class="cta-btn" href="#cases">Inspect the Live Case Studies &rarr;</a>
+    </section>
+
+    <section class="section" id="identity-kit">
+      <span class="label-mono">01 · Decide Once</span>
+      <h2>Visual Identity Kit (Frame, Not Upstage)</h2>
+      <p>
+        One primary font (<code>Inter</code>), one monospace font for technical proof (<code>JetBrains Mono</code>), and four locked hex codes (<code>#F8FAFC</code>, <code>#0F172A</code>, <code>#1E293B</code>, <code>#0D9488</code>) verified for WCAG AAA readability.
+      </p>
+      <div class="card">
+        <img src="./assets/identity-kit-sheet.png" alt="One-Page Visual Identity Kit Specimen" />
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <span class="label-mono">02 · Real Captures Over AI Slop</span>
+      <h2>Lead Case Studies (Framed with Quiet Whitespace)</h2>
+      <div class="card">
+        <h3>Case 1 (Lead Proof): Containerized FastAPI + PostgreSQL + Redis Stack (A3)</h3>
+        <p>Swapped <code>InMemoryTaskRepository</code> for <code>PostgresTaskRepository</code> with zero lines changed in <code>service.py</code> or <code>routes.py</code>, plus a 37.6x <code>EXPLAIN ANALYZE</code> speedup via composite B-tree indexing.</p>
+        <img src="./assets/real-capture-case-1-postgres.png" alt="Case 1 Real Terminal Capture: Docker Compose, pytest, and EXPLAIN ANALYZE" />
+      </div>
+      <div class="card">
+        <h3>Case 2: Persistent SQLite Storage Layer &amp; Contract Verification (W3-A2)</h3>
+        <p>Replaced volatile in-memory state with parameterized SQLite queries, atomic seed transactions, and live DB Browser inspection.</p>
+        <img src="./assets/real-capture-case-2-sqlite.png" alt="Case 2 Real Capture: DB Browser for SQLite showing tasks.db" />
+      </div>
+    </section>
+
+    <section class="section" id="curation">
+      <span class="label-mono">03 · Kill Your Darlings</span>
+      <h2>Ruthless Image Curation: What We Rejected &amp; Why</h2>
+      <div class="card">
+        <img src="./assets/curation-rejected-vs-kept.png" alt="Rejected Neon AI Slop vs Kept Restrained Frame" />
+      </div>
+    </section>
+  </div>
+</body>
+</html>
