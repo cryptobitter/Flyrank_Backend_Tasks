@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" width="720" height="180" role="img" aria-label="Consistent Connective Tissue Icon Set (3 Icons in Locked Identity Kit Style)">
+  <!-- Background Canvas (#F8FAFC) -->
+  <rect width="720" height="180" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+
+  <!-- ICON 1: Containerized Runtime (Docker + Volumes) -->
+  <g transform="translate(48, 28)">
+    <rect width="88" height="88" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+    <!-- Container Grid (2px uniform stroke in #F8FAFC) -->
+    <rect x="20" y="24" width="48" height="26" rx="4" fill="none" stroke="#F8FAFC" stroke-width="2.5" />
+    <line x1="36" y1="24" x2="36" y2="50" stroke="#F8FAFC" stroke-width="2.5" />
+    <line x1="52" y1="24" x2="52" y2="50" stroke="#F8FAFC" stroke-width="2.5" />
+    <!-- Persistent Volume Disk Layer (Single Accent #0D9488) -->
+    <rect x="20" y="56" width="48" height="10" rx="3" fill="#0D9488" />
+    <text x="44" y="114" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="500" fill="#0F172A">01 · CONTAINERS</text>
+  </g>
+
+  <!-- ICON 2: Clean Repository Boundary (Decoupled Layers) -->
+  <g transform="translate(316, 28)">
+    <rect width="88" height="88" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+    <!-- Top Layer: HTTP Route / Service (#F8FAFC) -->
+    <rect x="20" y="20" width="48" height="14" rx="3" fill="none" stroke="#F8FAFC" stroke-width="2.5" />
+    <!-- Middle Interface Contract Line (Single Accent #0D9488) -->
+    <line x1="16" y1="44" x2="72" y2="44" stroke="#0D9488" stroke-width="3" stroke-dasharray="5,4" />
+    <!-- Bottom Layer: Database Repository (#F8FAFC) -->
+    <rect x="20" y="54" width="48" height="14" rx="3" fill="none" stroke="#F8FAFC" stroke-width="2.5" />
+    <text x="44" y="114" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="500" fill="#0F172A">02 · REPOSITORY</text>
+  </g>
+
+  <!-- ICON 3: Indexed SQL & Verified Persistence -->
+  <g transform="translate(584, 28)">
+    <rect width="88" height="88" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+    <!-- B-Tree Root & Branches (#F8FAFC) -->
+    <circle cx="44" cy="24" r="6" fill="none" stroke="#F8FAFC" stroke-width="2.5" />
+    <line x1="40" y1="29" x2="26" y2="48" stroke="#F8FAFC" stroke-width="2.5" />
+    <line x1="48" y1="29" x2="62" y2="48" stroke="#0D9488" stroke-width="2.5" />
+    <!-- Leaf Nodes: Indexed Target Node Highlighted in #0D9488 -->
+    <rect x="16" y="50" width="20" height="14" rx="3" fill="none" stroke="#F8FAFC" stroke-width="2.5" />
+    <rect x="52" y="50" width="20" height="14" rx="3" fill="#0D9488" />
+    <text x="44" y="114" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="500" fill="#0F172A">03 · B-TREE INDEX</text>
+  </g>
+</svg>
