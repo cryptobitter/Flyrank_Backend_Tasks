@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decide Once: Build Your Identity Kit · One-Page Deliverable</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --text: #0F172A;
+      --main: #1E293B;
+      --accent: #0D9488;
+      --border: #E2E8F0;
+      --muted: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding: 48px 24px;
+    }
+
+    .sheet {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      background: #F0FDFA;
+      border: 1px solid #99F6E4;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .swatch {
+      border-radius: 10px;
+      padding: 20px 16px;
+      border: 1px solid var(--border);
+      min-height: 145px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .swatch-hex {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .style-note {
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 10px;
+      padding: 28px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .style-note strong {
+      color: #5EEAD4;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="top-row">
+      <img src="./logo.svg" alt="Portfolio Wordmark &amp; Monogram Logo" height="56" />
+      <span class="badge">Week 3 · Decide Once: Build Your Identity Kit</span>
+    </div>
+
+    <h2>1 · Typography (2 Free Google Fonts)</h2>
+    <div class="grid-2">
+      <div class="box">
+        <div style="font-size: 22px; font-weight: 700; margin-bottom: 8px;">Inter (Heading &amp; Body Font)</div>
+        <p style="color: var(--muted); font-size: 15px;">
+          <strong>Headings:</strong> Inter 600 SemiBold / 700 Bold (-0.02em tracking)<br />
+          <strong>Body:</strong> Inter 400 Regular (16px, 1.65 line-height, 65ch max-width)
+        </p>
+      </div>
+      <div class="box">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 19px; font-weight: 500; margin-bottom: 8px; color: var(--main);">
+          JetBrains Mono (Code &amp; Proof)
+        </div>
+        <p style="color: var(--muted); font-size: 15px;">
+          <strong>Technical Evidence &amp; Labels:</strong> JetBrains Mono 400 / 500 (14px) for SQL query plans, HTTP status codes, and section eyebrows.
+        </p>
+      </div>
+    </div>
+
+    <h2>2 · Tight Palette (4 Hex Codes · WCAG AAA/AA Verified)</h2>
+    <div class="swatches">
+      <div class="swatch" style="background: #1E293B; color: #F8FAFC;">
+        <div>
+          <div style="font-size: 12px; opacity: 0.8;">Main Color</div>
+          <div style="font-weight: 700;">Deep Navy Slate</div>
+        </div>
+        <div class="swatch-hex">#1E293B</div>
+      </div>
+      <div class="swatch" style="background: #0F172A; color: #F8FAFC;">
+        <div>
+          <div style="font-size: 12px; opacity: 0.8;">Near-Black Text</div>
+          <div style="font-weight: 700;">Slate Ink (17.4:1 AAA)</div>
+        </div>
+        <div class="swatch-hex">#0F172A</div>
+      </div>
+      <div class="swatch" style="background: #F8FAFC; color: #0F172A;">
+        <div>
+          <div style="font-size: 12px; color: #475569;">Near-White Background</div>
+          <div style="font-weight: 700;">Alabaster Paper</div>
+        </div>
+        <div class="swatch-hex">#F8FAFC</div>
+      </div>
+      <div class="swatch" style="background: #0D9488; color: #FFFFFF;">
+        <div>
+          <div style="font-size: 12px; opacity: 0.9;">Single Accent</div>
+          <div style="font-weight: 700;">Signal Teal (4.6:1 AA)</div>
+        </div>
+        <div class="swatch-hex">#0D9488</div>
+      </div>
+    </div>
+
+    <h2>3 · Logo &amp; Favicon</h2>
+    <div class="grid-2">
+      <div class="box" style="display: flex; align-items: center; gap: 20px;">
+        <img src="./favicon.svg" alt="Favicon" width="56" height="56" />
+        <div>
+          <strong>Monogram Favicon (<code>favicon.svg</code>)</strong>
+          <p style="color: var(--muted); font-size: 14px;">Terminal prompt bracket (<code>&gt;_</code>) in <code>#0F172A</code>, <code>#F8FAFC</code>, and <code>#0D9488</code>.</p>
+        </div>
+      </div>
+      <div class="box" style="display: flex; align-items: center;">
+        <img src="./logo.svg" alt="Wordmark Logo" style="max-width: 100%; height: auto;" />
+      </div>
+    </div>
+
+    <h2>4 · The Two-Line Style Note (Added to Claude Project / AI Workspace)</h2>
+    <div class="style-note">
+      <div><strong>Line 1 (Fonts &amp; Hex Codes):</strong> Fonts: Inter (600/700 headings, 400 body at 16px/65ch) + JetBrains Mono (14px code/labels); Palette: #1E293B main surface, #0F172A near-black text, #F8FAFC near-white background, #0D9488 single teal accent.</div>
+      <div style="margin-top: 10px;"><strong>Line 2 (Mood):</strong> Mood: Calm, high-contrast architectural documentation with generous whitespace that quietly frames real terminal captures and SQL benchmarks without competing for attention.</div>
+    </div>
+  </div>
+</body>
+</html>
