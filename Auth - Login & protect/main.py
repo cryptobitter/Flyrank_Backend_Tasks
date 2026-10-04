@@ -1,5 +1,5 @@
 """
-Stage 2: The Public & Protected Gates (GET /public/info and GET /protected/profile).
+Stage 3: The Guard — Token Verification on GET /protected/profile via supabase.auth.get_user(token).
 """
 
 from contextlib import asynccontextmanager
@@ -125,7 +125,19 @@ def protected_profile(request: Request):
     token = _extract_bearer_token(request)
     if not token:
         return JSONResponse(status_code=401, content={"error": "Access token required"})
-    return {"message": "Token received", "token_preview": f"{token[:10]}..."}
+
+    sb = _get_supabase(request)
+    try:
+        user_res = sb.auth.get_user(token)
+        user = getattr(user_res, "user", None)
+        if user is None:
+            return JSONResponse(status_code=401, content={"error": "Invalid or expired token"})
+        return JSONResponse(
+            status_code=200,
+            content={"user": _serialize_user(user)},
+        )
+    except Exception:
+        return JSONResponse(status_code=401, content={"error": "Invalid or expired token"})
 
 
 if __name__ == "__main__":
