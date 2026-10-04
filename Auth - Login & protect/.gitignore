@@ -1,0 +1,12 @@
+# Never commit private environment variables or Supabase keys
+.env
+.env.local
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.pytest_cache/
