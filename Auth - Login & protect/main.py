@@ -1,5 +1,5 @@
 """
-Stage 1: Open Auth — Sign Up (POST /auth/signup) & Log In (POST /auth/login).
+Stage 2: The Public & Protected Gates (GET /public/info and GET /protected/profile).
 """
 
 from contextlib import asynccontextmanager
@@ -41,6 +41,14 @@ def _serialize_user(user: Any) -> dict[str, Any]:
         "created_at": str(getattr(user, "created_at", "")) if getattr(user, "created_at", None) else None,
         "role": getattr(user, "role", "authenticated"),
     }
+
+
+def _extract_bearer_token(request: Request) -> str | None:
+    auth_header = request.headers.get("Authorization")
+    if not auth_header or not auth_header.startswith("Bearer "):
+        return None
+    token = auth_header[len("Bearer "):].strip()
+    return token if token else None
 
 
 @app.post("/auth/signup", status_code=201)
@@ -105,6 +113,19 @@ async def login(request: Request):
         )
     except Exception:
         return JSONResponse(status_code=401, content={"error": "Invalid login credentials"})
+
+
+@app.get("/public/info")
+def public_info():
+    return {"message": "Welcome stranger! This info is public."}
+
+
+@app.get("/protected/profile")
+def protected_profile(request: Request):
+    token = _extract_bearer_token(request)
+    if not token:
+        return JSONResponse(status_code=401, content={"error": "Access token required"})
+    return {"message": "Token received", "token_preview": f"{token[:10]}..."}
 
 
 if __name__ == "__main__":
