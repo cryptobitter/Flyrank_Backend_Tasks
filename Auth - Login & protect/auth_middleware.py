@@ -1,13 +1,19 @@
 """
-Stage 4: Reusable Authentication Dependency / Middleware Guard (`require_auth`).
-Extracts and verifies the Bearer token via Supabase Auth (`supabase.auth.get_user(token)`).
-Raises `AuthError` (handled globally as HTTP 401 with `{"error": ...}`) when the token
-is missing, malformed, expired, or invalid.
+Stage 5: Reusable Authentication Dependency with FastAPI `HTTPBearer` for Swagger UI (`/docs`).
+Configures `HTTPBearer(auto_error=False)` so Swagger UI displays the 'Authorize' padlock button
+and lock icons on protected routes while preserving exact HTTP 401 JSON error responses.
 """
 
 from typing import Any
-from fastapi import Request
+from fastapi import Request, Security
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 import supabase_client
+
+bearer_scheme = HTTPBearer(
+    scheme_name="BearerAuth",
+    description="Paste the JWT `access_token` returned by `POST /auth/login`.",
+    auto_error=False,
+)
 
 
 class AuthError(Exception):
@@ -36,8 +42,14 @@ def serialize_user(user: Any) -> dict[str, Any]:
     }
 
 
-def extract_bearer_token(request: Request) -> str:
-    """Extract JWT from 'Authorization: Bearer <token>' header or raise AuthError(401)."""
+def extract_bearer_token(
+    request: Request,
+    credentials: HTTPAuthorizationCredentials | None = None,
+) -> str:
+    """
+    Extract JWT from `HTTPBearer` credentials or raw `Authorization: Bearer <token>` header.
+    Raises `AuthError("Access token required", 401)` if missing or malformed.
+    """
     auth_header = request.headers.get("Authorization")
     if not auth_header:
         raise AuthError("Access token required")
@@ -46,15 +58,20 @@ def extract_bearer_token(request: Request) -> str:
     if len(parts) != 2 or parts[0] != "Bearer" or not parts[1].strip():
         raise AuthError("Access token required")
 
+    if credentials and credentials.credentials.strip():
+        return credentials.credentials.strip()
     return parts[1].strip()
 
 
-def require_auth(request: Request) -> dict[str, Any]:
+def require_auth(
+    request: Request,
+    credentials: HTTPAuthorizationCredentials | None = Security(bearer_scheme),
+) -> dict[str, Any]:
     """
-    Reusable FastAPI dependency that verifies the caller's Bearer JWT with Supabase.
-    Returns a dictionary with `{"user": serialized_user, "token": raw_token}`.
+    Reusable FastAPI dependency that registers `HTTPBearer` in OpenAPI/Swagger UI
+    and verifies the caller's Bearer JWT with Supabase (`supabase.auth.get_user(token)`).
     """
-    token = extract_bearer_token(request)
+    token = extract_bearer_token(request, credentials)
     sb = get_supabase_from_request(request)
     try:
         user_res = sb.auth.get_user(token)

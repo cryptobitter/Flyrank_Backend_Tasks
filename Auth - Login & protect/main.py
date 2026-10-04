@@ -1,12 +1,13 @@
 """
-Stage 4: Reusable Auth Dependency (`require_auth`), Protected Dashboard, and POST /auth/logout.
+Stage 5: FastAPI Application with Swagger UI (`/docs`) and Bearer Token Authorization.
 """
 
 from contextlib import asynccontextmanager
-from typing import Any
+from typing import Any, Optional
 from fastapi import Depends, FastAPI, Request, Response
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field
 
 from auth_middleware import (
     AuthError,
@@ -17,6 +18,11 @@ from auth_middleware import (
 import supabase_client
 
 
+class AuthCredentials(BaseModel):
+    email: Optional[str] = Field(default=None, examples=["test@example.com"])
+    password: Optional[str] = Field(default=None, examples=["password123"])
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     client = supabase_client.get_supabase_client()
@@ -25,7 +31,15 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Auth Login & Protect API", lifespan=lifespan)
+app = FastAPI(
+    title="Auth Login & Protect API (Supabase + FastAPI)",
+    description=(
+        "Secure REST API implementing Sign Up, Log In, Log Out, and JWT-protected routes "
+        "using Supabase Auth as the Identity Provider (IdP) and `HTTPBearer` security in Swagger UI."
+    ),
+    version="1.0.0",
+    lifespan=lifespan,
+)
 
 
 @app.exception_handler(AuthError)
@@ -38,18 +52,19 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     return JSONResponse(status_code=400, content={"error": "Email and password are required"})
 
 
-@app.post("/auth/signup", status_code=201)
-async def signup(request: Request):
-    try:
-        body = await request.json()
-    except Exception:
-        return JSONResponse(status_code=400, content={"error": "Invalid JSON body"})
+@app.post("/auth/signup", status_code=201, tags=["Authentication"])
+async def signup(request: Request, payload: Optional[AuthCredentials] = None):
+    if payload is None:
+        try:
+            body = await request.json()
+        except Exception:
+            return JSONResponse(status_code=400, content={"error": "Email and password are required"})
+        email = body.get("email") if isinstance(body, dict) else None
+        password = body.get("password") if isinstance(body, dict) else None
+    else:
+        email = payload.email
+        password = payload.password
 
-    if not isinstance(body, dict):
-        return JSONResponse(status_code=400, content={"error": "Request body must be a JSON object"})
-
-    email = body.get("email")
-    password = body.get("password")
     if not isinstance(email, str) or not email.strip() or not isinstance(password, str) or not password.strip():
         return JSONResponse(status_code=400, content={"error": "Email and password are required"})
 
@@ -67,18 +82,19 @@ async def signup(request: Request):
         return JSONResponse(status_code=400, content={"error": str(exc)})
 
 
-@app.post("/auth/login")
-async def login(request: Request):
-    try:
-        body = await request.json()
-    except Exception:
-        return JSONResponse(status_code=400, content={"error": "Invalid JSON body"})
+@app.post("/auth/login", tags=["Authentication"])
+async def login(request: Request, payload: Optional[AuthCredentials] = None):
+    if payload is None:
+        try:
+            body = await request.json()
+        except Exception:
+            return JSONResponse(status_code=400, content={"error": "Email and password are required"})
+        email = body.get("email") if isinstance(body, dict) else None
+        password = body.get("password") if isinstance(body, dict) else None
+    else:
+        email = payload.email
+        password = payload.password
 
-    if not isinstance(body, dict):
-        return JSONResponse(status_code=400, content={"error": "Request body must be a JSON object"})
-
-    email = body.get("email")
-    password = body.get("password")
     if not isinstance(email, str) or not email.strip() or not isinstance(password, str) or not password.strip():
         return JSONResponse(status_code=400, content={"error": "Email and password are required"})
 
@@ -102,8 +118,9 @@ async def login(request: Request):
         return JSONResponse(status_code=401, content={"error": "Invalid login credentials"})
 
 
-@app.post("/auth/logout", status_code=204)
+@app.post("/auth/logout", status_code=204, tags=["Authentication"])
 def logout(request: Request, auth_ctx: dict[str, Any] = Depends(require_auth)):
+    """Terminate the active user session (Requires Bearer Token)."""
     sb = get_supabase_from_request(request)
     try:
         sb.auth.sign_out()
@@ -112,18 +129,21 @@ def logout(request: Request, auth_ctx: dict[str, Any] = Depends(require_auth)):
     return Response(status_code=204)
 
 
-@app.get("/public/info")
+@app.get("/public/info", tags=["Public"])
 def public_info():
+    """Public endpoint accessible without any authentication token."""
     return {"message": "Welcome stranger! This info is public."}
 
 
-@app.get("/protected/profile")
+@app.get("/protected/profile", tags=["Protected"])
 def protected_profile(auth_ctx: dict[str, Any] = Depends(require_auth)):
+    """Protected endpoint returning verified user metadata from Supabase Auth."""
     return {"user": auth_ctx["user"]}
 
 
-@app.get("/protected/dashboard")
+@app.get("/protected/dashboard", tags=["Protected"])
 def protected_dashboard(auth_ctx: dict[str, Any] = Depends(require_auth)):
+    """Second protected endpoint demonstrating reusable auth middleware/dependency."""
     return {
         "message": f"Welcome to the protected dashboard, {auth_ctx['user']['email']}!",
         "user": auth_ctx["user"],
