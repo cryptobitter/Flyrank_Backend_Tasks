@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptobitter · Backend &amp; API Systems Portfolio (Empty but Live)</title>
+  <meta name="description" content="I build containerized Python backends where routes stay five lines long and data survives any restart." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       WEEK 03 IDENTITY KIT TOKENS — LOCKED ONCE, INHERITED EVERYWHERE
+       Style Note:
+       Typography: Inter (700/600 headings, 400 body) + JetBrains Mono (400/500 code & metrics).
+       Palette: Background #F8FAFC | Text #0F172A | Main Surface #1E293B | Accent #0D9488.
+       Mood: Quiet, high-contrast engineering specification sheet that frames terminal benchmarks,
+             SQL query plans, and clean Python diffs without visual clutter.
+       ========================================================================== */
+    :root {
+      --bg-canvas: #F8FAFC;
+      --text-ink: #0F172A;
+      --surface-slate: #1E293B;
+      --accent-teal: #0D9488;
+      --border-subtle: #CBD5E1;
+      --text-muted: #475569;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-ink);
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* Top bar */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-ink);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background-color: var(--surface-slate);
+      border: 2px solid var(--accent-teal);
+      color: var(--bg-canvas);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-mark span {
+      color: var(--accent-teal);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent-teal);
+      background: rgba(13, 148, 136, 0.08);
+      border: 1px solid rgba(13, 148, 136, 0.35);
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-teal);
+    }
+
+    /* Main Hero (Empty but Live shell) */
+    main {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-teal);
+      margin-bottom: 0.85rem;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--text-ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 65ch;
+      margin-bottom: 2rem;
+    }
+
+    /* Terminal status card in #1E293B */
+    .terminal-shell {
+      background-color: var(--surface-slate);
+      color: var(--bg-canvas);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      border-left: 4px solid var(--accent-teal);
+    }
+
+    .terminal-shell .comment {
+      color: #94A3B8;
+    }
+
+    .terminal-shell .accent {
+      color: #2DD4BF;
+    }
+
+    /* Sitemap Slots (Ready for Week 5 Fill) */
+    .slots-heading {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .slot-card {
+      border: 1px dashed var(--border-subtle);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      background: #FFFFFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .slot-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-ink);
+    }
+
+    .slot-meta {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-teal);
+    }
+
+    /* Primary CTA */
+    .cta-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent-teal);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 0.75rem 1.35rem;
+      border-radius: 6px;
+    }
+
+    .btn-secondary {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-ink);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="./index.html" class="brand">
+        <span class="brand-mark">&gt;<span>_</span></span>
+        <span>Cryptobitter · Backend Systems</span>
+      </a>
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        EMPTY BUT LIVE · W04
+      </span>
+    </header>
+
+    <main>
+      <span class="eyebrow">Week 04 Milestone · Ship a Blank Page</span>
+      <h1>I build containerized Python backends where routes stay five lines long and data survives any restart.</h1>
+      <p class="lead">
+        This live starter page proves the deployment pipeline, typography tokens, and color palette are online before Week 05 case study assembly begins.
+      </p>
+
+      <div class="terminal-shell" role="region" aria-label="Deployment diagnostics">
+        <div class="comment"># Stack &amp; Host Verification</div>
+        <div>$ stack: <span class="accent">Semantic HTML5 + Vanilla CSS Custom Properties (Zero-JS Bloat)</span></div>
+        <div>$ host:  <span class="accent">GitHub Pages / Static Edge (HTTPS + Mobile Viewport Verified)</span></div>
+        <div>$ ready: <span class="accent">Identity Kit + 3 Case Studies + Content Map loaded in Claude Project</span></div>
+      </div>
+
+      <div class="slots-heading">Content Map Slots Reserved for Week 05 Build</div>
+      <div class="slot-grid">
+        <div class="slot-card">
+          <span class="slot-title">01 · Lead Case: Containerized FastAPI + PostgreSQL + Redis (A3)</span>
+          <span class="slot-meta">[0.089ms Indexed Lookup · Ready]</span>
+        </div>
+        <div class="slot-card">
+          <span class="slot-title">02 · Supporting Case: Zero-Rewrite SQLite Repository Migration (W3-A2)</span>
+          <span class="slot-meta">[11/11 Pytest Contracts · Ready]</span>
+        </div>
+        <div class="slot-card">
+          <span class="slot-title">03 · Security &amp; Reliability: Supabase JWT Middleware + Prompt Ladder</span>
+          <span class="slot-meta">[HTTPBearer + 6-Stage Eval · Ready]</span>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn-primary" href="https://github.com/cryptobitter/Flyrank_Backend_Tasks">Book a 15-Minute Technical Walkthrough →</a>
+        <a class="btn-secondary" href="https://github.com/cryptobitter/Flyrank_Backend_Tasks">View Source Repository on GitHub</a>
+      </div>
+    </main>
+
+    <footer>
+      <span>Stack: Plain HTML5 + CSS · Hosted Free via GitHub Pages</span>
+      <span>Palette: #F8FAFC · #0F172A · #1E293B · #0D9488</span>
+    </footer>
+  </div>
+</body>
+</html>
