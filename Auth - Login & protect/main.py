@@ -1,12 +1,19 @@
 """
-Stage 3: The Guard — Token Verification on GET /protected/profile via supabase.auth.get_user(token).
+Stage 4: Reusable Auth Dependency (`require_auth`), Protected Dashboard, and POST /auth/logout.
 """
 
 from contextlib import asynccontextmanager
 from typing import Any
-from fastapi import FastAPI, Request
+from fastapi import Depends, FastAPI, Request, Response
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+
+from auth_middleware import (
+    AuthError,
+    get_supabase_from_request,
+    require_auth,
+    serialize_user,
+)
 import supabase_client
 
 
@@ -21,34 +28,14 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Auth Login & Protect API", lifespan=lifespan)
 
 
+@app.exception_handler(AuthError)
+async def auth_error_handler(request: Request, exc: AuthError):
+    return JSONResponse(status_code=exc.status_code, content={"error": exc.message})
+
+
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     return JSONResponse(status_code=400, content={"error": "Email and password are required"})
-
-
-def _get_supabase(request: Request) -> Any:
-    if not hasattr(request.app.state, "supabase") or request.app.state.supabase is None:
-        request.app.state.supabase = supabase_client.get_supabase_client()
-    return request.app.state.supabase
-
-
-def _serialize_user(user: Any) -> dict[str, Any]:
-    if isinstance(user, dict):
-        return user
-    return {
-        "id": getattr(user, "id", None),
-        "email": getattr(user, "email", None),
-        "created_at": str(getattr(user, "created_at", "")) if getattr(user, "created_at", None) else None,
-        "role": getattr(user, "role", "authenticated"),
-    }
-
-
-def _extract_bearer_token(request: Request) -> str | None:
-    auth_header = request.headers.get("Authorization")
-    if not auth_header or not auth_header.startswith("Bearer "):
-        return None
-    token = auth_header[len("Bearer "):].strip()
-    return token if token else None
 
 
 @app.post("/auth/signup", status_code=201)
@@ -66,7 +53,7 @@ async def signup(request: Request):
     if not isinstance(email, str) or not email.strip() or not isinstance(password, str) or not password.strip():
         return JSONResponse(status_code=400, content={"error": "Email and password are required"})
 
-    sb = _get_supabase(request)
+    sb = get_supabase_from_request(request)
     try:
         res = sb.auth.sign_up({"email": email.strip(), "password": password})
         user = getattr(res, "user", None)
@@ -74,7 +61,7 @@ async def signup(request: Request):
             return JSONResponse(status_code=400, content={"error": "Unable to register user"})
         return JSONResponse(
             status_code=201,
-            content={"message": "User registered successfully", "user": _serialize_user(user)},
+            content={"message": "User registered successfully", "user": serialize_user(user)},
         )
     except Exception as exc:
         return JSONResponse(status_code=400, content={"error": str(exc)})
@@ -95,7 +82,7 @@ async def login(request: Request):
     if not isinstance(email, str) or not email.strip() or not isinstance(password, str) or not password.strip():
         return JSONResponse(status_code=400, content={"error": "Email and password are required"})
 
-    sb = _get_supabase(request)
+    sb = get_supabase_from_request(request)
     try:
         res = sb.auth.sign_in_with_password({"email": email.strip(), "password": password})
         session = getattr(res, "session", None)
@@ -108,11 +95,21 @@ async def login(request: Request):
                 "access_token": getattr(session, "access_token", None),
                 "refresh_token": getattr(session, "refresh_token", None),
                 "token_type": "bearer",
-                "user": _serialize_user(user) if user else None,
+                "user": serialize_user(user) if user else None,
             },
         )
     except Exception:
         return JSONResponse(status_code=401, content={"error": "Invalid login credentials"})
+
+
+@app.post("/auth/logout", status_code=204)
+def logout(request: Request, auth_ctx: dict[str, Any] = Depends(require_auth)):
+    sb = get_supabase_from_request(request)
+    try:
+        sb.auth.sign_out()
+    except Exception:
+        pass
+    return Response(status_code=204)
 
 
 @app.get("/public/info")
@@ -121,23 +118,16 @@ def public_info():
 
 
 @app.get("/protected/profile")
-def protected_profile(request: Request):
-    token = _extract_bearer_token(request)
-    if not token:
-        return JSONResponse(status_code=401, content={"error": "Access token required"})
+def protected_profile(auth_ctx: dict[str, Any] = Depends(require_auth)):
+    return {"user": auth_ctx["user"]}
 
-    sb = _get_supabase(request)
-    try:
-        user_res = sb.auth.get_user(token)
-        user = getattr(user_res, "user", None)
-        if user is None:
-            return JSONResponse(status_code=401, content={"error": "Invalid or expired token"})
-        return JSONResponse(
-            status_code=200,
-            content={"user": _serialize_user(user)},
-        )
-    except Exception:
-        return JSONResponse(status_code=401, content={"error": "Invalid or expired token"})
+
+@app.get("/protected/dashboard")
+def protected_dashboard(auth_ctx: dict[str, Any] = Depends(require_auth)):
+    return {
+        "message": f"Welcome to the protected dashboard, {auth_ctx['user']['email']}!",
+        "user": auth_ctx["user"],
+    }
 
 
 if __name__ == "__main__":
