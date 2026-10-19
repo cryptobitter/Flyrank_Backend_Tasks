@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cryptobitter · Backend &amp; API Systems Portfolio</title>
-  <meta name="description" content="I build containerized Python backends where routes stay five lines long and data survives any restart." />
+  <title>Aditya Rajput · Backend &amp; API Systems Portfolio (@cryptobitter)</title>
+  <meta name="description" content="I build containerized Python REST APIs and relational database architectures for early-stage B2B SaaS." />
   <meta name="theme-color" content="#1E293B" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -464,16 +464,37 @@
       footer {
         flex-direction: column;
         gap: 0.4rem;
+        margin-bottom: 3.5rem; /* Space for sticky bar */
       }
+
+      .mobile-sticky-cta {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(248, 250, 252, 0.96);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-subtle);
+        padding: 0.65rem 1.25rem;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.08);
+      }
+    }
+
+    .mobile-sticky-cta {
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a href="./index.html" class="brand" aria-label="Cryptobitter Backend Systems Home">
+      <a href="./index.html" class="brand" aria-label="Aditya Rajput Backend Systems Home">
         <span class="brand-mark">&gt;<span>_</span></span>
-        <span>Cryptobitter · Backend Systems</span>
+        <span>Aditya Rajput <span style="font-weight: 400; color: var(--text-muted); font-size: 0.85rem;">(@cryptobitter)</span></span>
       </a>
       <span class="status-pill">
         <span class="status-dot"></span>
@@ -482,18 +503,18 @@
     </header>
 
     <main>
-      <span class="eyebrow">Week 08 Milestone · Make It Do Something</span>
-      <h1>I build containerized Python backends where routes stay five lines long and data survives any restart.</h1>
+      <span class="eyebrow">Production Backend Engineering · Early-Stage B2B SaaS</span>
+      <h1>I build containerized Python REST APIs and relational database architectures for early-stage B2B SaaS.</h1>
       <p class="lead">
-        Verified on real mobile viewports: touch targets exceed 48px, text passes WCAG AA contrast, terminal transcripts wrap safely, and the portfolio is wired end-to-end with a live walkthrough request form on a free-tier serverless backend.
+        Built for Engineering Leads and Technical Founders who need maintainable backend services with clean repository patterns, sub-millisecond database queries, and zero hand-holding.
       </p>
 
       <div class="terminal-shell" role="region" aria-label="Live stack diagnostics">
         <div class="comment"># Live Mobile &amp; System Health Diagnostics</div>
-        <div>$ viewport: <span class="accent">Mobile First (Fluid clamp, 48px Touch Targets, Zero Overflow)</span></div>
-        <div>$ stack:    <span class="accent">FastAPI + PostgreSQL 16 + Redis 7 + Supabase JWT Middleware</span></div>
-        <div>$ feature:  <span class="accent">15-Minute Technical Walkthrough Form (Free-Tier Formsubmit / Netlify)</span></div>
-        <div>$ proof:    <span class="accent">2.410ms &rarr; 0.089ms (27x EXPLAIN ANALYZE Speedup Verified)</span></div>
+        <div>$ engineer:  <span class="accent">Aditya Rajput (Core Contributor @ GDGOC PSIT)</span></div>
+        <div>$ stack:     <span class="accent">FastAPI + PostgreSQL 16 + Redis 7 + Supabase JWT Middleware</span></div>
+        <div>$ target:    <span class="accent">Early-Stage B2B SaaS (15-Minute Technical Walkthrough)</span></div>
+        <div>$ benchmark: <span class="accent">2.410ms &rarr; 0.089ms (27x EXPLAIN ANALYZE Speedup Verified)</span></div>
       </div>
 
       <div class="slots-heading">Core Technical Case Studies &amp; Evidence</div>
@@ -506,18 +527,24 @@
               <span class="proof-caption">&uarr; Real capture: Sequential scan (2.410ms) &rarr; Bitmap index scan (0.089ms) on 10,000 tasks.</span>
             </div>
           </div>
-          <span class="slot-meta">[0.089ms Indexed Lookup · Passed]</span>
+          <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/A3%20Containerize%20your%20stack" target="_blank" rel="noopener noreferrer" class="slot-meta" style="text-decoration: none;">[0.089ms Lookup &middot; View Code &rarr;]</a>
         </div>
 
-        <div class="slot-card">
-          <span class="slot-title">02 · Supporting Case: Zero-Rewrite SQLite Repository Migration (W3-A2)</span>
-          <span class="slot-meta">[11/11 Pytest Contracts · Passed]</span>
-        </div>
+        <a class="slot-card" href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/W3-A2" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+          <div>
+            <span class="slot-title">02 · Supporting Case: Zero-Rewrite SQLite Repository Migration (W3-A2)</span>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Clean repository pattern separating route handlers from SQLite/PostgreSQL drivers.</p>
+          </div>
+          <span class="slot-meta">[11/11 Pytest Contracts &middot; View Code &rarr;]</span>
+        </a>
 
-        <div class="slot-card">
-          <span class="slot-title">03 · Security &amp; Reliability: Supabase JWT Middleware + Prompt Ladder</span>
-          <span class="slot-meta">[HTTPBearer + 6-Stage Eval · Passed]</span>
-        </div>
+        <a class="slot-card" href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/Auth%20-%20Login%20%26%20protect" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+          <div>
+            <span class="slot-title">03 · Security &amp; Reliability: Supabase JWT Middleware &amp; Guardrails</span>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Protected endpoints with HTTPBearer dependency injection and prompt safety filters.</p>
+          </div>
+          <span class="slot-meta">[HTTPBearer + Tests &middot; View Code &rarr;]</span>
+        </a>
       </div>
 
       <div class="cta-row">
@@ -696,5 +723,13 @@
       });
     })();
   </script>
+
+  <!-- Week 07 Mobile-First Polish: Sticky Quick Action for Phones -->
+  <div class="mobile-sticky-cta" aria-label="Mobile Quick Action">
+    <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-ink);">Need a backend engineer?</div>
+    <a class="btn-primary" href="#contact" style="padding: 0.45rem 0.85rem; font-size: 0.82rem; min-height: 40px; text-decoration: none;">
+      Book 15-Min Call &darr;
+    </a>
+  </div>
 </body>
 </html>
