@@ -1,6 +1,6 @@
 # The Plain-English DNS Walkthrough: How the Internet Finds Your Website
 
-**Author:** Aditya Sharma  
+**Author:** Aditya Rajput  
 **Assignment:** PF-04 — Personal Website Live on the FlyRank Domain  
 **Audience:** Non-technical team members, product managers, and curious engineers  
 
@@ -12,7 +12,7 @@ Imagine you want to call your friend **Alex**. You don’t pull out a notepad an
 
 The **Domain Name System (DNS)** is the contact list of the entire Internet.
 
-Computers and cloud servers don't communicate using names like `google.com` or `aditya-sharma-backend.netlify.app`. They communicate across network cables and fiber optics using numbers called **IP Addresses** (such as `75.2.60.5` for IPv4 or `2600:1f18:...` for IPv6). 
+Computers and cloud servers don't communicate using names like `google.com` or `aditya-rajput-backend.netlify.app`. They communicate across network cables and fiber optics using numbers called **IP Addresses** (such as `75.2.60.5` for IPv4 or `2600:1f18:...` for IPv6). 
 
 Humans are great at remembering words; machines are great at processing numbers. DNS is the global, high-speed translation bridge that connects the two in a fraction of a second.
 
@@ -20,7 +20,7 @@ Humans are great at remembering words; machines are great at processing numbers.
 
 ## 2. What Happens Between Typing a URL and Seeing the Page?
 
-When someone types `https://aditya-sharma-backend.netlify.app` into their browser and presses **Enter**, a 4-step global relay race takes place:
+When someone types `https://aditya-rajput-backend.netlify.app` into their browser and presses **Enter**, a 4-step global relay race takes place:
 
 ```
 [User Browser]
@@ -37,7 +37,7 @@ When someone types `https://aditya-sharma-backend.netlify.app` into their browse
       ▼ ("Netlify manages netlify.app. Ask ns1.netlify.com at IP Y.Y.Y.Y")
 4. Authoritative Nameserver (Netlify DNS)
       │
-      ▼ ("The site aditya-sharma-backend.netlify.app lives at IP 75.2.60.5")
+      ▼ ("The site aditya-rajput-backend.netlify.app lives at IP 75.2.60.5")
 [User Browser connects directly to 75.2.60.5 via HTTPS]
 ```
 
@@ -61,7 +61,7 @@ The TLD server knows which company or hosting platform registered `netlify.app`.
 ### Step 4: The Authoritative Nameserver (The Final Source of Truth)
 Finally, the courier reaches Netlify's **Authoritative Nameserver**. This server is the definitive source of truth that holds the official zone records for every site hosted on Netlify.
 
-The courier asks: *"Where is `aditya-sharma-backend.netlify.app`?"*  
+The courier asks: *"Where is `aditya-rajput-backend.netlify.app`?"*  
 The Authoritative Nameserver checks its records:
 > *"That website is served by our Global Edge CDN nodes at IP `75.2.60.5`."*
 
@@ -82,7 +82,7 @@ An `A` record points a hostname directly to a physical **static IPv4 number**.
 
 ### 2. The `CNAME` Record (Canonical Name)
 A `CNAME` record maps a domain name to **another domain name** (an alias), rather than to a fixed number.
-- Example: `www.aditya.com` &rarr; `aditya-sharma-backend.netlify.app`
+- Example: `www.aditya.com` &rarr; `aditya-rajput-backend.netlify.app`
 - *Analogy:* Forwarding your mail. If you move from an apartment to a house, you don't reprint your business cards with new GPS coordinates; you tell the post office: "Whatever is addressed to *Office A*, deliver to *Main HQ*".
 
 ### Why do platforms like Netlify, Vercel, and GitHub Pages recommend CNAME records?
@@ -90,7 +90,7 @@ Modern cloud hosts don't run websites on a single dusty computer in a closet. Th
 
 If Netlify had everyone point an `A` record to a static IP address, and an AWS data center experienced a power surge, Netlify wouldn't be able to easily reroute user traffic without millions of people updating their DNS settings.
 
-By configuring a **CNAME** (`yourcustomdomain.com` &rarr; `aditya-sharma-backend.netlify.app`):
+By configuring a **CNAME** (`yourcustomdomain.com` &rarr; `aditya-rajput-backend.netlify.app`):
 1. **Dynamic Routing:** Netlify can steer visitors to the closest edge server geographically.
 2. **DDoS Protection & Failover:** If a server node goes down, Netlify updates their internal routing immediately without you touching your domain.
 3. **Automatic SSL/TLS Provisioning:** Netlify can verify domain ownership through the CNAME record and automatically issue a free Let's Encrypt SSL certificate.
@@ -102,7 +102,7 @@ By configuring a **CNAME** (`yourcustomdomain.com` &rarr; `aditya-sharma-backend
 ## 4. How HTTPS and SSL Certificates Fit In
 
 When your browser receives the IP address `75.2.60.5` from DNS, it doesn't just ask for HTML in plain text. It initiates a **TLS 1.3 Handshake**:
-1. The server presents a digital certificate proving it legally represents `aditya-sharma-backend.netlify.app`.
+1. The server presents a digital certificate proving it legally represents `aditya-rajput-backend.netlify.app`.
 2. The browser validates that this certificate was issued by an accredited Certificate Authority (such as *Let's Encrypt* or *DigiCert*).
 3. The browser and server negotiate cryptographic session keys.
 4. All future requests and responses are encrypted end-to-end.

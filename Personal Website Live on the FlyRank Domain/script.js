@@ -1,5 +1,5 @@
 /**
- * Aditya Sharma — Personal Portfolio & Infrastructure Showcase
+ * Aditya Rajput — Personal Portfolio & Infrastructure Showcase
  * Vanilla JavaScript (Zero external dependencies)
  */
 
@@ -17,7 +17,7 @@ function initTheme() {
   const htmlRoot = document.documentElement;
 
   // Retrieve saved theme or infer from system
-  const savedTheme = localStorage.getItem('as_portfolio_theme');
+  const savedTheme = localStorage.getItem('ar_portfolio_theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   if (savedTheme) {
@@ -34,7 +34,7 @@ function initTheme() {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
       htmlRoot.setAttribute('data-theme', newTheme);
-      localStorage.setItem('as_portfolio_theme', newTheme);
+      localStorage.setItem('ar_portfolio_theme', newTheme);
     });
   }
 }
