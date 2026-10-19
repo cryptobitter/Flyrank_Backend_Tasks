@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptobitter · Book a Technical Walkthrough</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-canvas: #F8FAFC;
+      --text-ink: #0F172A;
+      --surface-slate: #1E293B;
+      --accent-teal: #0D9488;
+      --accent-teal-hover: #0F766E;
+      --border-subtle: #CBD5E1;
+      --text-muted: #475569;
+      --error-red: #DC2626;
+      --error-bg: #FEF2F2;
+      --success-green: #059669;
+      --success-bg: #ECFDF5;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-card {
+      width: 100%;
+      max-width: 640px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-header {
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1.25rem;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-teal);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-ink);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-top: 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      color: var(--text-ink);
+      background-color: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+      background-color: #FFFFFF;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    /* Honeypot field (hidden from genuine users, traps automated bots) */
+    .hp-field {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      z-index: -1;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--accent-teal);
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.85rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      background-color: var(--accent-teal-hover);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .alert {
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+      display: none;
+    }
+
+    .alert-error {
+      background-color: var(--error-bg);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      color: var(--error-red);
+    }
+
+    .alert-success {
+      background-color: var(--success-bg);
+      border: 1px solid rgba(5, 150, 105, 0.3);
+      color: var(--success-green);
+    }
+
+    .success-card {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .success-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: var(--success-bg);
+      color: var(--success-green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .footer-note {
+      margin-top: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .footer-note a {
+      color: var(--accent-teal);
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="form-card" role="region" aria-label="Technical Walkthrough Request Form">
+    <div class="form-header">
+      <span class="eyebrow">Backend Systems · Direct Inquiry</span>
+      <h1>Book a 15-Minute Technical Walkthrough</h1>
+      <p class="subtitle">
+        Have a question about my containerized FastAPI/Postgres architecture, 0.089ms index benchmarks, or want to discuss a backend engineering role? Send a message directly to my inbox.
+      </p>
+    </div>
+
+    <!-- Feedback messages -->
+    <div id="form-alert" class="alert" role="alert"></div>
+
+    <!-- Active Form -->
+    <form id="walkthrough-form" action="https://formsubmit.co/ajax/adityarajput.86046@gmail.com" method="POST" novalidate>
+      <!-- Anti-Spam Honeypot Field -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="_honey">Leave this blank</label>
+        <input type="text" name="_honey" id="_honey" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <!-- Formsubmit configuration metadata -->
+      <input type="hidden" name="_subject" value="[Portfolio] New 15-Minute Technical Walkthrough Request" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <div class="form-group">
+        <label for="name">Your Name or Organization *</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Sarah Jenkins (Tech Lead)" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="sarah@company.com" required />
+        <div class="hint">I will respond to this email address within 24 hours.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="topic">Walkthrough Focus / Topic</label>
+        <select id="topic" name="topic">
+          <option value="Architecture Walkthrough">15-Min Containerized Architecture Walkthrough (A3)</option>
+          <option value="Zero-Rewrite DB Migration">Zero-Rewrite Database Migration &amp; Indexes (W3-A2)</option>
+          <option value="Agent &amp; MCP Integration">Backend PR Scout Agent &amp; MCP Tooling</option>
+          <option value="Engineering Role / Contract">Backend Engineering Role / Contract Inquiry</option>
+          <option value="General Technical Question">General Technical Question / Code Review</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Project Context or Questions *</label>
+        <textarea id="message" name="message" placeholder="Briefly describe what you'd like to walk through or discuss..." required></textarea>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn-submit">
+        <span>Send Walkthrough Request →</span>
+      </button>
+    </form>
+
+    <!-- Success Confirmation State (Replaces form upon verified transmission) -->
+    <div id="success-state" class="success-card">
+      <div class="success-icon">✓</div>
+      <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-ink);">Request Received!</h2>
+      <p style="color: var(--text-muted); max-width: 48ch; margin: 0 auto 1.5rem; font-size: 0.95rem;">
+        Thanks for reaching out. Your walkthrough request has been dispatched to my inbox. I will review your notes and reply with calendar availability within 24 hours.
+      </p>
+      <div style="font-family: var(--font-mono); font-size: 0.82rem; background: var(--bg-canvas); padding: 0.75rem 1rem; border-radius: 6px; display: inline-block; color: var(--text-muted); margin-bottom: 1.25rem;">
+        Receipt: <span style="color: var(--accent-teal);">HTTP 200 · Delivered via Form Backend</span>
+      </div>
+      <div>
+        <button type="button" id="reset-btn" class="btn-submit" style="width: auto; padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+          Send Another Message
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      End-to-End Wired via Free Tier Form API · <a href="./plain-words-explainer.md">Read the Plain-Words Explainer</a>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      const form = document.getElementById('walkthrough-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const alertBox = document.getElementById('form-alert');
+      const successState = document.getElementById('success-state');
+      const resetBtn = document.getElementById('reset-btn');
+
+      function showAlert(msg, isError) {
+        alertBox.textContent = msg;
+        alertBox.className = 'alert ' + (isError ? 'alert-error' : 'alert-success');
+        alertBox.style.display = 'block';
+        alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      function clearAlert() {
+        alertBox.textContent = '';
+        alertBox.style.display = 'none';
+      }
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        clearAlert();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        const honeypot = form._honey.value;
+
+        // Anti-spam check: if bot filled hidden field, quietly abort
+        if (honeypot) {
+          form.style.display = 'none';
+          successState.style.display = 'block';
+          return;
+        }
+
+        // Graceful Client-side Validation (Fail Gracefully)
+        if (!name) {
+          showAlert('Please provide your name or organization so I know who I am speaking with.', true);
+          form.name.focus();
+          return;
+        }
+
+        if (!email) {
+          showAlert('Please enter an email address so I can reply to your walkthrough request.', true);
+          form.email.focus();
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          showAlert('That email address format looks invalid (e.g. name@domain.com). Please check for typos.', true);
+          form.email.focus();
+          return;
+        }
+
+        if (!message) {
+          showAlert('Please share a short note or question about what you would like to discuss.', true);
+          form.message.focus();
+          return;
+        }
+
+        // In-flight loading state
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Sending to inbox...</span>';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          const result = await response.json();
+
+          if (response.ok && (result.success === 'true' || result.success === true)) {
+            // Success state transition
+            form.style.display = 'none';
+            successState.style.display = 'block';
+            form.reset();
+          } else {
+            throw new Error(result.message || 'Server rejected the submission.');
+          }
+        } catch (err) {
+          console.error('Submission error:', err);
+          showAlert(
+            'Network delivery issue: Could not reach the form backend. Please feel free to email me directly at adityarajput.86046@gmail.com.',
+            true
+          );
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      });
+
+      resetBtn.addEventListener('click', function() {
+        successState.style.display = 'none';
+        form.style.display = 'block';
+        clearAlert();
+        form.name.focus();
+      });
+    })();
+  </script>
+</body>
+</html>

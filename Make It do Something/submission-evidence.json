@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "feature": "15-Minute Technical Walkthrough Request Form",
+  "tier": "100% Free Tier (Formsubmit Serverless Gateway)",
+  "destination_email": "adityarajput.86046@gmail.com",
+  "timestamp_utc": "2026-10-19T16:15:18Z",
+  "latency_sec": 10.615,
+  "http_status": 200,
+  "server_response": {
+    "success": "false",
+    "message": "Make sure you open this page through a web server, FormSubmit will not work in pages browsed as HTML files."
+  },
+  "submitted_payload": {
+    "name": "Alex Mercer (Staff Backend Lead)",
+    "email": "alex.mercer.review@example.com",
+    "topic": "Architecture Walkthrough",
+    "message": "Automated verification of Cryptobitter's 15-minute technical walkthrough request. Reviewing containerized FastAPI stack and 0.089ms EXPLAIN ANALYZE index speedup.",
+    "_subject": "[Verified Test] 15-Min Technical Walkthrough Request",
+    "_honey": ""
+  }
+}
