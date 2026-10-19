@@ -1,0 +1,276 @@
+{
+  "name": "Production Intelligence Pipeline - Draft, Critique, Revise & Brief",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "trigger-brief",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "c71a396b-7d0e-4e4b-9991-884841b9d1f1",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        220,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-7-sonnet-20250219",
+        "options": {
+          "temperature": 0.2,
+          "maxTokens": 2500
+        }
+      },
+      "id": "893df4ab-e034-4a25-9d51-3b41d24c0d12",
+      "name": "Anthropic Model - Gather & Synthesize",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        460,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert Principal Research Engineer. Analyze the following raw technical document/incident postmortem:\n\nRAW INPUT:\n{{ $json.body.raw_text }}\n\nSOURCE METADATA:\nTopic: {{ $json.body.topic }}\nSource URL: {{ $json.body.source_url }}\nPrimary System: {{ $json.body.system_affected }}\n\nTASK:\nExtract structured findings according to the Stage 1 & 2 schema:\n1. Core Root Cause / Architectural Driver\n2. Key Quantitative Claims & Benchmarks\n3. Critical Breaking Changes / Failure Vectors\n4. Latency / Memory / Throughput Tradeoffs\n5. Verifiable Source Citations",
+        "options": {
+          "systemMessage": "You are a senior systems engineer analyzing technical engineering sources. Never speculate or hallucinate. Ground every claim directly in the source text."
+        }
+      },
+      "id": "b1b01289-4e5c-4fc3-a551-7f9cb4cf8231",
+      "name": "Step 1 & 2: Gather & Synthesize",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        480,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-7-sonnet-20250219",
+        "options": {
+          "temperature": 0.3,
+          "maxTokens": 3000
+        }
+      },
+      "id": "7fa2a891-62bc-449e-b7d6-3e421cd77f33",
+      "name": "Anthropic Model - Draft",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        740,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a Lead Backend Architect. Take the synthesized engineering findings below and draft a production-ready Technical Brief and Architecture RFC:\n\nSYNTHESIZED FINDINGS:\n{{ $json.text }}\n\nProduce:\n- Section 1: Executive Context & Incident/Update Synopsis\n- Section 2: Architectural Deep-Dive & Root-Cause Mechanics\n- Section 3: Concrete Code / Infrastructure Remediation Snippet\n- Section 4: Production Rollout Risk & Migration Matrix",
+        "options": {
+          "systemMessage": "Draft actionable, authoritative technical briefs. Avoid fluff or generic high-level summaries. Include precise configuration flags, parameters, and architectural diagrams."
+        }
+      },
+      "id": "da14c27a-8f78-43df-92d5-9114b772c918",
+      "name": "Step 3: Draft Architecture Brief",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        760,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-7-sonnet-20250219",
+        "options": {
+          "temperature": 0.1,
+          "maxTokens": 3000
+        }
+      },
+      "id": "f8a29cb1-92b1-4f9e-a0e2-6321adbb9354",
+      "name": "Anthropic Model - Critique",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        1020,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an Adversarial Red Team Reviewer and Staff Systems Auditor. Ruthlessly critique the drafted technical brief against the raw source:\n\nDRAFT UNDER REVIEW:\n{{ $json.text }}\n\nRAW SOURCE CONTEXT:\n{{ $('Webhook Trigger').first().json.body.raw_text }}\n\nEVALUATION DIMENSIONS:\n1. Factual Grounding & Hallucinations: Did the draft invent any flags, configuration keys, or performance statistics?\n2. Operational Hazards: Will the proposed code cause deadlocks, race conditions, memory leaks, or connection exhaustion under high concurrency?\n3. Omissions: Did the draft miss critical prerequisites, deprecation warnings, or rollback procedures?\n\nProvide structured feedback categorized into: [CRITICAL DEFECT], [OPERATIONAL RISK], and [SUGGESTED REVISION].",
+        "options": {
+          "systemMessage": "You are a merciless technical auditor. Your job is to catch dangerous omissions and fabricated claims before code touches production."
+        }
+      },
+      "id": "8b51283a-4e2b-4ec9-897e-128a5099cda1",
+      "name": "Step 4: Adversarial Critique & Audit",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1040,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-7-sonnet-20250219",
+        "options": {
+          "temperature": 0.2,
+          "maxTokens": 3500
+        }
+      },
+      "id": "c19b28fa-67a3-4819-8671-89ab41b77ecb",
+      "name": "Anthropic Model - Format & Polish",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        1300,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Revise the Technical Brief by strictly integrating all valid critiques from the audit report:\n\nORIGINAL DRAFT:\n{{ $('Step 3: Draft Architecture Brief').first().json.text }}\n\nAUDIT CRITIQUE:\n{{ $json.text }}\n\nOUTPUT REQUIREMENTS:\nDeliver the final publication-ready brief in clean, standardized GitHub-flavored Markdown:\n- Title & Executive Status Badge\n- Context & Root-Cause Mechanics\n- Validated Implementation Snippet\n- Operational Pre-Flight Checklist\n- Audit Sign-off Table (listing critiques addressed)",
+        "options": {
+          "systemMessage": "Format the final output cleanly. Integrate all valid critique points, remove any debunked assumptions, and ensure complete code blocks."
+        }
+      },
+      "id": "3e9b148c-71f0-4fa2-938a-4122dca81792",
+      "name": "Step 5: Revise & Format Final Brief",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1320,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"success\",\n  \"brief_markdown\": {{ JSON.stringify($json.text) }},\n  \"pipeline_metadata\": {\n    \"topic\": {{ JSON.stringify($('Webhook Trigger').first().json.body.topic) }},\n    \"stages_completed\": [\"gather\", \"synthesize\", \"draft\", \"critique\", \"revise_format\"]\n  }\n}",
+        "options": {}
+      },
+      "id": "5f1b8a32-1b9e-4a61-9c12-3214589d9ab4",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        340
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Step 1 & 2: Gather & Synthesize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Model - Gather & Synthesize": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Step 1 & 2: Gather & Synthesize",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Step 1 & 2: Gather & Synthesize": {
+      "main": [
+        [
+          {
+            "node": "Step 3: Draft Architecture Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Model - Draft": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Step 3: Draft Architecture Brief",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Step 3: Draft Architecture Brief": {
+      "main": [
+        [
+          {
+            "node": "Step 4: Adversarial Critique & Audit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Model - Critique": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Step 4: Adversarial Critique & Audit",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Step 4: Adversarial Critique & Audit": {
+      "main": [
+        [
+          {
+            "node": "Step 5: Revise & Format Final Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Model - Format & Polish": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Step 5: Revise & Format Final Brief",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Step 5: Revise & Format Final Brief": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
