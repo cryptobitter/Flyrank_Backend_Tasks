@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Aditya Sharma — Backend Engineer & AI Systems Developer</title>
+  <meta name="description" content="Personal portfolio and systems engineering showcase of Aditya Sharma. Backend developer, AI workflows engineer, and GDGOC PSIT contributor." />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aditya Sharma — Backend Engineer & AI Systems Developer" />
+  <meta property="og:description" content="Explore production backend systems, resilient web scrapers, autonomous AI workflows, and cloud deployments." />
+  <meta property="og:url" content="https://aditya-sharma-backend.netlify.app" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar" id="top">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Aditya Sharma Home">
+        <span class="logo-mark">&lt;AS/&gt;</span>
+        <span class="brand-name">Aditya Sharma</span>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#badge" class="nav-link">Certification</a>
+        <a href="#dns" class="nav-link">DNS Guide</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="btn btn-outline cv-btn" id="openCvModalBtn">
+          <span>View CV</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Available for Backend Engineering & AI Systems Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering resilient backends &amp; <span class="gradient-text">intelligent workflows</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I'm <strong>Aditya Sharma</strong> — a software and backend engineer, core contributor at 
+          <strong>GDGOC PSIT</strong>, and fellow at the <strong>FlyRank AI Engineering Internship</strong>. 
+          I build high-throughput APIs, automated LLM orchestration pipelines, and robust data collection systems.
+        </p>
+
+        <!-- Primary Action Links -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://cal.com/aditya-sharma" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Book a 1:1 Call</span>
+          </a>
+          <a href="https://github.com/cryptobitter" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-sharma-backend" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <!-- Social Proof Stats -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Automated Schema Validation</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">60+</span>
+            <span class="metric-label">Books Scraped Respectfully</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">84%</span>
+            <span class="metric-label">Time Saved via LLM Pipelines</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">A+</span>
+            <span class="metric-label">Clean HTTPS &amp; DNS Architecture</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Positioning Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Background &amp; Philosophy</span>
+          <h2 class="section-title">Bridging Systems Thinking with AI Acceleration</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              I believe software craftsmanship begins with respect: respect for the server you query, respect for the schemas that govern your data, and respect for the users who rely on your uptime.
+            </p>
+            <p>
+              Currently expanding my engineering toolkit through the <strong>FlyRank Technical Internship</strong>, I focus on practical production engineering: building self-healing web scrapers, automated multi-agent content pipelines, and reproducible web infrastructure running on modern edge CDNs.
+            </p>
+            <p>
+              Beyond coding, I lead technical initiatives at <strong>GDGOC PSIT</strong>, helping coordinate open-source contribution platforms and Hacktoberfest initiatives.
+            </p>
+          </div>
+
+          <div class="skills-card">
+            <h3 class="skills-heading">Technical Arsenal</h3>
+            <div class="skills-groups">
+              <div class="skill-group">
+                <span class="skill-category">Backend &amp; Languages</span>
+                <div class="pill-list">
+                  <span class="tech-pill">Python 3.12</span>
+                  <span class="tech-pill">Node.js</span>
+                  <span class="tech-pill">FastAPI</span>
+                  <span class="tech-pill">Express</span>
+                  <span class="tech-pill">PostgreSQL</span>
+                  <span class="tech-pill">REST APIs</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <span class="skill-category">AI Engineering &amp; Workflows</span>
+                <div class="pill-list">
+                  <span class="tech-pill">Claude Projects</span>
+                  <span class="tech-pill">NotebookLM</span>
+                  <span class="tech-pill">n8n Automation</span>
+                  <span class="tech-pill">Structured Prompt Chaining</span>
+                  <span class="tech-pill">Pydantic Schemas</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <span class="skill-category">Infrastructure &amp; Networking</span>
+                <div class="pill-list">
+                  <span class="tech-pill">Netlify Edge</span>
+                  <span class="tech-pill">Vercel</span>
+                  <span class="tech-pill">DNS (A / CNAME / ALIAS)</span>
+                  <span class="tech-pill">HTTPS / TLS 1.3</span>
+                  <span class="tech-pill">Git / CI/CD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Selected Projects &amp; Core Deliverables</h2>
+          <p class="section-description">Real systems built during FlyRank and university open source leadership.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-badge live-badge">Live in Production</span>
+              <span class="project-num">01</span>
+            </div>
+            <h3 class="project-title">Hacktoberfest Tracking &amp; Repository Hub</h3>
+            <p class="project-description">
+              Centralized platform for open source contributors tracking active pull requests, GDGOC PSIT issues, and real-time GitHub repository updates. Built with real-time GitHub REST API integration.
+            </p>
+            <div class="project-tags">
+              <span>Next.js / React</span>
+              <span>GitHub API</span>
+              <span>Vercel Edge</span>
+              <span>Open Source</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://hacktober-tracking-system-ocai.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span>Live App</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/PSIT-GDGOC/hacktoberfest-web" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+                <span>Source Code</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-badge engineering-badge">Data Engineering</span>
+              <span class="project-num">02</span>
+            </div>
+            <h3 class="project-title">The Polite Scraper</h3>
+            <p class="project-description">
+              Production data extraction engine built for ethical web scraping. Adheres strictly to RFC 9309 (robots.txt), self-identifies with descriptive User-Agent headers, applies jittered delay backoffs, and validates 60 items against a strict Pydantic JSON schema with 100% type reliability.
+            </p>
+            <div class="project-tags">
+              <span>Python 3.12</span>
+              <span>BeautifulSoup4</span>
+              <span>Pydantic v2</span>
+              <span>Ethical Scraper</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/the%20polite%20scraper" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-badge ai-badge">AI Systems</span>
+              <span class="project-num">03</span>
+            </div>
+            <h3 class="project-title">Ship an Automation Workflow v2</h3>
+            <p class="project-description">
+              End-to-end 4-step research & synthesis pipeline chaining raw technical audits into executive briefs. Evaluated across 5 real production inputs, demonstrating an 84% time reduction compared to manual research while documenting precise human-in-the-loop review criteria.
+            </p>
+            <div class="project-tags">
+              <span>NotebookLM</span>
+              <span>Claude Projects</span>
+              <span>n8n Pipeline</span>
+              <span>Workflow Chaining</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/Ship%20an%20Automation%20Workflow%20v2" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+                <span>Documentation &amp; Runs</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FlyRank Completion Badge Section -->
+    <section class="badge-section" id="badge">
+      <div class="container">
+        <div class="badge-card">
+          <div class="badge-seal-wrapper">
+            <div class="badge-seal">
+              <div class="seal-inner">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 15l-2 5l9-9l-9-9l2 5l-8 4l8 4z"></path>
+                </svg>
+                <span class="seal-text">FLYRANK</span>
+              </div>
+            </div>
+          </div>
+          <div class="badge-content">
+            <span class="section-tag">Program Milestone</span>
+            <h2 class="badge-title">FlyRank Official Completion Badge</h2>
+            <p class="badge-description">
+              As part of the FlyRank Engineering Internship track, this space is dedicated to host the verified 
+              <strong>FlyRank Completion Badge</strong> upon final capstone review and approval. 
+              It stands as recognition of completing core infrastructure, polite data systems, automated workflows, and production deployments.
+            </p>
+            <div class="badge-status-box">
+              <span class="status-indicator pending"></span>
+              <span class="badge-status-label">Status: <strong>Track In Progress (Capstone Phase)</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DNS Walkthrough Section -->
+    <section class="dns-section" id="dns">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Infrastructure Explained</span>
+          <h2 class="section-title">The DNS Walkthrough: Demystifying the Internet's Phonebook</h2>
+          <p class="section-description">
+            A clear, non-technical explanation of what happens between pressing [Enter] on a URL and receiving your first byte of HTML.
+          </p>
+        </div>
+
+        <div class="dns-card">
+          <div class="dns-intro">
+            <h3>What is DNS, and why does it matter?</h3>
+            <p>
+              Imagine if you had to memorize the 12-digit GPS coordinates of every friend’s house before you could visit them. 
+              Computers communicate using numeric <strong>IP addresses</strong> (like <code>75.2.60.5</code>). Humans, however, remember names like <code>aditya-sharma-backend.netlify.app</code>. 
+              The <strong>Domain Name System (DNS)</strong> is the global, decentralized translation layer that maps friendly domain names to server IP addresses in under 50 milliseconds.
+            </p>
+          </div>
+
+          <div class="dns-steps-grid">
+            <div class="dns-step">
+              <div class="step-num">1</div>
+              <h4>Local Resolver (The Courier)</h4>
+              <p>Your browser first checks its local cache. If missing, it asks your Recursive Resolver (usually your ISP or 1.1.1.1) to find the address.</p>
+            </div>
+            <div class="dns-step">
+              <div class="step-num">2</div>
+              <h4>Root Server (.)</h4>
+              <p>The resolver asks the global Root Server: <em>"Where do I find domains ending in <code>.app</code>?"</em> The Root directs it to the <code>.app</code> TLD nameserver.</p>
+            </div>
+            <div class="dns-step">
+              <div class="step-num">3</div>
+              <h4>TLD Server (.app)</h4>
+              <p>The TLD server knows who manages <code>netlify.app</code> and responds with Netlify's Authoritative Nameservers.</p>
+            </div>
+            <div class="dns-step">
+              <div class="step-num">4</div>
+              <h4>Authoritative Nameserver</h4>
+              <p>Netlify's server holds the final record. It tells the resolver: <em>"Here is the IP address for that site!"</em> The resolver caches it and returns it to your browser.</p>
+            </div>
+          </div>
+
+          <div class="cname-explanation">
+            <h4>What is a CNAME Record? (The Alias)</h4>
+            <p>
+              An <strong>A Record</strong> points directly to a fixed IP address (e.g. <code>aditya.com &rarr; 75.2.60.5</code>). 
+              A <strong>CNAME (Canonical Name) Record</strong> points a name to <em>another name</em> (e.g. <code>www.aditya.com &rarr; aditya-sharma-backend.netlify.app</code>). 
+              This lets modern cloud providers change server IPs, route across multi-region CDNs, and handle load balancing behind the scenes without breaking your custom domain configuration.
+            </p>
+          </div>
+
+          <div class="dns-action">
+            <a href="dns-walkthrough.md" class="btn btn-outline" target="_blank">
+              <span>Read Full DNS Technical Walkthrough (Markdown)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="contact-title">Start a Conversation or Book a Call</h2>
+            <p class="contact-subtitle">
+              Whether you're looking for a backend engineer, discussing open-source opportunities, or collaborating on AI workflows, I'd love to chat.
+            </p>
+          </div>
+
+          <div class="contact-channels">
+            <a href="https://cal.com/aditya-sharma" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-name">Direct Booking Link</span>
+                <span class="contact-detail">cal.com/aditya-sharma</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/aditya-sharma-backend" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-name">LinkedIn Profile</span>
+                <span class="contact-detail">linkedin.com/in/aditya-sharma-backend</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/cryptobitter" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-name">GitHub Portfolio</span>
+                <span class="contact-detail">github.com/cryptobitter</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="brand-logo">&lt;AS/&gt; Aditya Sharma</span>
+        <p class="footer-copy">Built with hand-crafted semantic HTML5, modern CSS3, and vanilla JS. Deployed on Netlify Edge with automatic HTTPS.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to Top</a>
+        <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks" target="_blank" rel="noopener noreferrer">FlyRank Repo</a>
+        <a href="dns-walkthrough.md" target="_blank">DNS Doc</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CV Viewer Modal -->
+  <div class="modal-overlay" id="cvModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+      <div class="modal-header">
+        <div>
+          <h3 id="cvModalTitle" class="modal-title">Aditya Sharma — Curriculum Vitae</h3>
+          <p class="modal-subtitle">Software Engineer &bull; Backend Systems &bull; AI Automation</p>
+        </div>
+        <button class="modal-close-btn" id="closeCvModalBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="cv-section">
+          <h4>Education &amp; Experience</h4>
+          <p><strong>PSIT (Pranveer Singh Institute of Technology)</strong> — Computer Science &amp; Engineering</p>
+          <p><strong>GDGOC PSIT</strong> — Core Contributor &amp; Technical Coordinator (Hacktoberfest, Open Source Platform)</p>
+          <p><strong>FlyRank Technical Internship</strong> — AI Engineering &amp; Backend Systems Fellow</p>
+        </div>
+        <div class="cv-section">
+          <h4>Key Technical Competencies</h4>
+          <p>Python, FastAPI, Express.js, PostgreSQL, REST APIs, RFC 9309 Scrapers, Pydantic, Prompt Engineering, n8n Workflow Automation, DNS &amp; Cloud Edge Deployments.</p>
+        </div>
+        <div class="cv-section">
+          <h4>Contact &amp; Links</h4>
+          <p>GitHub: <a href="https://github.com/cryptobitter" target="_blank">github.com/cryptobitter</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/aditya-sharma-backend" target="_blank">linkedin.com/in/aditya-sharma-backend</a></p>
+          <p>Booking: <a href="https://cal.com/aditya-sharma" target="_blank">cal.com/aditya-sharma</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="closeCvModalFooterBtn">Close</button>
+        <button class="btn btn-primary" id="copyCvLinkBtn">Copy Portfolio Link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
