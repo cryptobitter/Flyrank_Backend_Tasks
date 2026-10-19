@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FlyRank AI Internship//Aditya Rajput Portfolio Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:flyrank-impact-project-reminder-20261115T043000Z@cryptobitter
+DTSTAMP:20261019T180000Z
+DTSTART:20261115T043000Z
+DTEND:20261115T053000Z
+SUMMARY:🚀 FlyRank Portfolio Update: Ship Next Case Study (Logistics Trust Engine)
+DESCRIPTION:Time to update the portfolio! Reuse the Week 2 three-beat shape (Problem, What You Did, What Came of It) to index the Intra-City Logistics Trust & Verification Engine into your live portfolio on GitHub Pages / Netlify.\n\nInstructions in: Flyrank_Backend_Tasks/Impact Project/README.md\nClaude Project Template: Flyrank_Backend_Tasks/Impact Project/claude_project_context.md
+LOCATION:https://cryptobitter.github.io/Flyrank_Backend_Tasks/
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 24h until FlyRank Portfolio Update (Logistics Trust Engine)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 1 hour until FlyRank Portfolio Update session
+END:VALARM
+END:VEVENT
+END:VCALENDAR
