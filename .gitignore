@@ -1,8 +1,10 @@
-﻿__pycache__/
+__pycache__/
 *.py[cod]
 *.class
 *.so
 .env
 .env.local
+.venv/
+venv/
 .DS_Store
 Thumbs.db
