@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aditya Rajput//FlyRank Portfolio Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FlyRank Career Platform - Next Case Study Launch
+X-WR-TIMEZONE:UTC
+BEGIN:VEVENT
+UID:flyrank-case-study-2-aditya-20261115T100000Z@flyrank.internal
+DTSTAMP:20261020T134500Z
+DTSTART:20261115T100000Z
+DTEND:20261115T120000Z
+RRULE:FREQ=MONTHLY;BYDAY=3SU;INTERVAL=1
+SUMMARY:🚀 Ship Next Case Study to Portfolio: Distributed LLM Rate Limiter Proxy
+LOCATION:https://adityarajput.netlify.app
+DESCRIPTION:Scheduled FlyRank habit: Keep the portfolio alive with a second real project.\n\n1. Open Claude Project ("Aditya Rajput Portfolio & Career Platform").\n2. Provide Redis benchmark logs & proxy architecture.\n3. Draft the 3-beat shape (Problem -> What I Did -> What Came of It).\n4. Push update to Personal Website Live on the FlyRank Domain/index.html.\n\nProject: Distributed LLM Token Rate Limiter & Cost Metering Proxy\nRepo: https://github.com/cryptobitter/llm-rate-limiter-proxy\nLive Site: https://adityarajput.netlify.app
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+SEQUENCE:1
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Time to ship your next case study to https://adityarajput.netlify.app!
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 1 hour until portfolio deployment block!
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
