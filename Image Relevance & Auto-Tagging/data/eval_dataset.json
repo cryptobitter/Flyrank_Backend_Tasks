@@ -1,0 +1,98 @@
+[
+  {
+    "post_id": "post_01",
+    "title": "Winter Habits of the Red Fox",
+    "content": "Red foxes (Vulpes vulpes) adapt remarkably well to cold northern climates, using their bushy tails to stay warm and hunting small mammals under deep snow.",
+    "expected_image_id": "fox_01",
+    "expected_subject": "red fox",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_02",
+    "title": "Apex Hunters: Timber Wolf Pack Dynamics",
+    "content": "Gray wolves (Canis lupus) rely on strict pack hierarchies and collaborative hunting strategies to bring down large ungulates across vast territories.",
+    "expected_image_id": "wolf_01",
+    "expected_subject": "gray wolf",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_03",
+    "title": "Why Golden Retrievers Make Loving Family Pets",
+    "content": "With their gentle temperament and eagerness to please, domestic golden retriever dogs are one of the most beloved companion breeds worldwide.",
+    "expected_image_id": "dog_01",
+    "expected_subject": "golden retriever",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_04",
+    "title": "Grizzly Bears and the Salmon Run",
+    "content": "Coastal grizzly bears (Ursus arctos) gather along Alaskan rivers each summer to gorge on spawning salmon ahead of winter hibernation.",
+    "expected_image_id": "bear_01",
+    "expected_subject": "grizzly bear",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_05",
+    "title": "White-Tailed Deer in North American Woodlands",
+    "content": "White-tailed deer are agile herbivores that browse forest meadows and signal danger to their herd by flashing the bright white underside of their tails.",
+    "expected_image_id": "deer_01",
+    "expected_subject": "white-tailed deer",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_06",
+    "title": "Vulpes vulpes: The Biology of European Wild Foxes",
+    "content": "Known scientifically as Vulpes vulpes, the wild red fox is a cunning nocturnal omnivore recognized for its copper-colored coat and white chest patch.",
+    "expected_image_id": "fox_02",
+    "expected_subject": "red fox",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_07",
+    "title": "Wolf Reintroduction Programs in National Parks",
+    "content": "The restoration of gray wolves in wilderness reserves has balanced deer and elk populations, triggering a trophic cascade that revitalized riverbanks.",
+    "expected_image_id": "wolf_02",
+    "expected_subject": "gray wolf",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_08",
+    "title": "Active Exercise Routines for Domestic Dogs",
+    "content": "Regular fetch games, leash walking, and mental enrichment keep energetic domestic retrievers healthy and prevent destructive behavior.",
+    "expected_image_id": "dog_02",
+    "expected_subject": "golden retriever",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_09",
+    "title": "Brown Bears and Northern Alpine Habitat",
+    "content": "Grizzly bears roam mountain slopes feeding on alpine vegetation, small rodents, and roots using their long curved claws.",
+    "expected_image_id": "bear_02",
+    "expected_subject": "grizzly bear",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_10",
+    "title": "Antler Growth Cycles in Male Deer",
+    "content": "Male white-tailed deer shed and regrow their bone antlers annually, powered by testosterone surges during the autumn mating rut.",
+    "expected_image_id": "deer_02",
+    "expected_subject": "white-tailed deer",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_11",
+    "title": "Modern Enterprise Datacenter Architecture",
+    "content": "High-density server racks and redundant fiber optics ensure 99.999% uptime for mission-critical cloud computing workloads.",
+    "expected_image_id": "tech_01",
+    "expected_subject": "cloud datacenter",
+    "expected_decision": "ACCEPTED"
+  },
+  {
+    "post_id": "post_12",
+    "title": "Abyssal Plain and Bioluminescent Deep Sea Organisms",
+    "content": "At depths exceeding 4,000 meters, anglerfish and giant squids navigate total darkness using chemical luciferin light reactions.",
+    "expected_image_id": null,
+    "expected_subject": null,
+    "expected_decision": "NO_CONFIDENT_MATCH"
+  }
+]

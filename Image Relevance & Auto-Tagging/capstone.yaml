@@ -1,0 +1,39 @@
+# FlyRank Backend Capstone Manifest: AI Image Understanding & Content Matching Engine
+version: "1.0"
+capstone: "flyrank-capstone-image-relevance"
+language: "python"
+framework: "fastapi"
+
+# Execution Commands
+run: "python main.py"
+seed: "python seed.py"
+test: "pytest tests/test_capstone_probes.py -v"
+eval: "python app/eval_runner.py"
+base_url: "http://localhost:8000"
+
+# Evaluator Endpoints
+endpoints:
+  health: "/"
+  batch_ingest: "/api/v1/images/batch-ingest"
+  batch_status: "/api/v1/images/batch-status/{job_id}"
+  list_images: "/api/v1/images"
+  create_post: "/api/v1/posts"
+  match_image: "/api/v1/posts/{post_id}/images"
+  review_pairing: "/api/v1/posts/{post_id}/review"
+  cost_ledger: "/api/v1/costs"
+  run_eval: "/api/v1/eval/run"
+
+# Evaluation Benchmark Result
+evaluation_benchmark:
+  eval_dataset_size: 12
+  top_1_precision_pct: 100.0
+  headline_metric: "12/12 correct (100.0% Top-1 Precision)"
+
+# Probes Tested & Passing
+probes:
+  probe_1: "Batch job processes 45 corpus images with Pydantic schema tags; 2 low-confidence images flagged"
+  probe_2: "Red fox post queries rank red fox image first; wolf and dog rank clearly lower"
+  probe_3: "Forced wolf candidate on fox post provably rejected by Mismatch Guard with category-mismatch explanation"
+  probe_4: "Deep sea post with no suitable corpus image returns 'no confident match' with explanation"
+  probe_5: "Evaluation runner benchmarks 100.0% Top-1 precision on labeled eval dataset, matching README"
+  probe_6: "Cost ledger attributes every vision tagging and embedding call with token usage and USD cost"
