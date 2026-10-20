@@ -1,0 +1,76 @@
+name: flyrank-capstone-metering-billing
+title: LLM Usage Metering & Billing Engine
+version: 1.0.0
+author: Aditya Rajput (cryptobitter)
+language: python
+framework: fastapi
+database: sqlite3
+
+run: "uvicorn app:app --host 0.0.0.0 --port 8000"
+seed: "python seed.py"
+test: "python test_capstone.py"
+base_url: "http://localhost:8000"
+
+probes:
+  health:
+    path: "/health"
+    method: "GET"
+    expected_status: 200
+
+  billable_metering:
+    path: "/api/v1/generate"
+    method: "POST"
+    headers:
+      Content-Type: "application/json"
+      Idempotency-Key: "eval_probe_idemp_key_100"
+    body:
+      tenant_id: "tenant_fresh"
+      prompt: "Explain how atomic database transactions work"
+      prompt_tokens: 150
+      cached_prompt_tokens: 40
+      completion_tokens: 100
+      reasoning_tokens: 30
+    expected_status: 200
+
+  usage_rollup:
+    path: "/api/v1/usage"
+    method: "GET"
+    params:
+      tenant_id: "tenant_fresh"
+    expected_status: 200
+
+  quota_boundary_check:
+    path: "/api/v1/generate"
+    method: "POST"
+    headers:
+      Content-Type: "application/json"
+      Idempotency-Key: "eval_probe_at_limit"
+    body:
+      tenant_id: "tenant_at_limit"
+      prompt: "Attempting request beyond quota boundary"
+    expected_status: 429
+
+  stripe_checkout:
+    path: "/api/v1/billing/checkout"
+    method: "POST"
+    body:
+      tenant_id: "tenant_fresh"
+      plan_id: "pro"
+    expected_status: 200
+
+  stripe_webhook:
+    path: "/api/v1/webhooks/stripe"
+    method: "POST"
+    headers:
+      Content-Type: "application/json"
+    expected_status: 400
+
+  admin_reconcile:
+    path: "/api/v1/admin/reconcile"
+    method: "POST"
+    expected_status: 200
+
+  admin_alerts:
+    path: "/api/v1/admin/alerts"
+    method: "GET"
+    expected_status: 200

@@ -1,0 +1,181 @@
+{
+  "metering_idempotency": {
+    "initial_db_count": 0,
+    "final_db_count": 1,
+    "delta_events_created": 1,
+    "request_1_status": 200,
+    "request_1_cache_header": "MISS",
+    "request_1_body": {
+      "request_id": "req_cbc8210b99c6",
+      "tenant_id": "tenant_fresh",
+      "content": "Simulated LLM response for tenant 'tenant_fresh': Successfully processed prompt ('Synthesize a technical post-mortem on da...') utilizing 255 total tokens.",
+      "usage": {
+        "prompt_tokens": 120,
+        "cached_prompt_tokens": 30,
+        "completion_tokens": 80,
+        "reasoning_tokens": 25,
+        "total_tokens": 255
+      },
+      "cost": {
+        "total_cost_micros": 182,
+        "total_cost_cents": 1,
+        "formatted_usd": "$0.000182",
+        "token_cost_micros": 82,
+        "base_fee_micros": 100,
+        "prompt_cost_micros": 18,
+        "cached_cost_micros": 1,
+        "completion_cost_micros": 48,
+        "reasoning_cost_micros": 15
+      },
+      "quota_status": {
+        "api_calls_used": 1,
+        "api_calls_limit": 1000,
+        "api_calls_remaining": 999,
+        "tokens_used": 255,
+        "tokens_limit": 100000,
+        "tokens_remaining": 99745,
+        "percentage_calls_used": 0.1,
+        "percentage_tokens_used": 0.26
+      },
+      "cached_response": false
+    },
+    "request_2_status": 200,
+    "request_2_cache_header": "HIT",
+    "request_2_body": {
+      "request_id": "req_cbc8210b99c6",
+      "tenant_id": "tenant_fresh",
+      "content": "Simulated LLM response for tenant 'tenant_fresh': Successfully processed prompt ('Synthesize a technical post-mortem on da...') utilizing 255 total tokens.",
+      "usage": {
+        "prompt_tokens": 120,
+        "cached_prompt_tokens": 30,
+        "completion_tokens": 80,
+        "reasoning_tokens": 25,
+        "total_tokens": 255
+      },
+      "cost": {
+        "total_cost_micros": 182,
+        "total_cost_cents": 1,
+        "formatted_usd": "$0.000182",
+        "token_cost_micros": 82,
+        "base_fee_micros": 100,
+        "prompt_cost_micros": 18,
+        "cached_cost_micros": 1,
+        "completion_cost_micros": 48,
+        "reasoning_cost_micros": 15
+      },
+      "quota_status": {
+        "api_calls_used": 1,
+        "api_calls_limit": 1000,
+        "api_calls_remaining": 999,
+        "tokens_used": 255,
+        "tokens_limit": 100000,
+        "tokens_remaining": 99745,
+        "percentage_calls_used": 0.1,
+        "percentage_tokens_used": 0.26
+      },
+      "cached_response": true
+    },
+    "db_recorded_event": {
+      "id": 25,
+      "tenant_id": "tenant_fresh",
+      "event_type": "llm_completion",
+      "api_calls_qty": 1,
+      "prompt_tokens": 120,
+      "cached_prompt_tokens": 30,
+      "completion_tokens": 80,
+      "reasoning_tokens": 25,
+      "total_tokens": 255,
+      "cost_micros": 182,
+      "idempotency_key": "idemp_proof_live_run_001",
+      "timestamp": "2026-10-20 14:54:44"
+    }
+  },
+  "quota_boundary": {
+    "call_1000_status": 200,
+    "call_1000_quota_status": {
+      "api_calls_used": 1000,
+      "api_calls_limit": 1000,
+      "api_calls_remaining": 0,
+      "tokens_used": 99743,
+      "tokens_limit": 100000,
+      "tokens_remaining": 257,
+      "percentage_calls_used": 100.0,
+      "percentage_tokens_used": 99.74
+    },
+    "call_1001_status": 429,
+    "call_1001_headers": {
+      "Retry-After": "3600"
+    },
+    "call_1001_body": {
+      "error": "Quota Exceeded",
+      "code": "RATE_LIMIT_EXCEEDED",
+      "message": "API call quota exceeded: 1000/1000 calls used this month. Upgrade to Pro for 50,000 calls/month.",
+      "retry_after_seconds": 3600
+    }
+  },
+  "cost_calculation": {
+    "generation_cost": {
+      "total_cost_micros": 72100,
+      "total_cost_cents": 8,
+      "formatted_usd": "$0.072100",
+      "token_cost_micros": 72000,
+      "base_fee_micros": 100,
+      "prompt_cost_micros": 15000,
+      "cached_cost_micros": 15000,
+      "completion_cost_micros": 30000,
+      "reasoning_cost_micros": 12000
+    },
+    "rollup_totals": {
+      "total_cost_micros": 7572100,
+      "total_cost_cents": 758,
+      "formatted_usd": "$7.572100"
+    },
+    "rollup_usage": {
+      "api_calls": 12501,
+      "tokens": 3370000,
+      "prompt_tokens": 1500000,
+      "cached_prompt_tokens": 1000000,
+      "completion_tokens": 750000,
+      "reasoning_tokens": 120000
+    }
+  },
+  "stripe_integration": {
+    "checkout_session": {
+      "session_id": "cs_test_4147ec6209aa492280ad95038ee23622",
+      "checkout_url": "https://checkout.stripe.com/c/pay/cs_test_4147ec6209aa492280ad95038ee23622",
+      "tenant_id": "tenant_upgrade_test",
+      "plan_id": "pro",
+      "mode": "test"
+    },
+    "forged_webhook_status": 400,
+    "forged_webhook_body": {
+      "error": "Bad Request",
+      "code": "INVALID_WEBHOOK_SIGNATURE",
+      "message": "Forged or invalid signature: HMAC-SHA256 verification failed."
+    },
+    "valid_webhook_status": 200,
+    "valid_webhook_body": {
+      "status": "processed",
+      "event_id": "evt_live_test_1792508084",
+      "event_type": "checkout.session.completed",
+      "message": "Successfully processed checkout.session.completed for event evt_live_test_1792508084."
+    },
+    "replay_webhook_status": 200,
+    "replay_webhook_body": {
+      "status": "ignored_duplicate",
+      "event_id": "evt_live_test_1792508084",
+      "event_type": "checkout.session.completed",
+      "message": "Event 'evt_live_test_1792508084' has already been processed at 2026-10-20 14:54:44."
+    },
+    "plan_before_webhook": "free",
+    "plan_after_webhook": "pro",
+    "limits_before": {
+      "api_calls": 1000,
+      "tokens": 100000
+    },
+    "limits_after": {
+      "api_calls": 50000,
+      "tokens": 10000000
+    }
+  }
+}
