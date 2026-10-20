@@ -1,0 +1,42 @@
+# FlyRank Backend Capstone Manifest: Embeddable Widget & Lead-Capture Platform
+version: "1.0"
+capstone: "flyrank-capstone-widget-platform"
+language: "python"
+framework: "fastapi"
+
+# Execution Commands
+run: "python main.py"
+seed: "python seed.py"
+test: "pytest tests/test_capstone_probes.py -v"
+base_url: "http://localhost:8000"
+
+# Public & Ingestion Endpoints to Probe
+endpoints:
+  health: "/"
+  widget_script: "/v1/widget.js"
+  widget_config: "/api/v1/widgets/{widget_id}/config"
+  public_submission: "/api/v1/widgets/{widget_id}/submit"
+  dashboard_stats: "/api/v1/dashboard/stats"
+  dashboard_submissions: "/api/v1/dashboard/submissions"
+  auth_login: "/api/v1/auth/login"
+  widget_crud: "/api/v1/widgets"
+
+# Seed Data Credentials (from seed.py)
+demo_credentials:
+  tenant_a:
+    email: "alex@acme.com"
+    password: "acme_secret_123"
+    primary_widget_id: "wgt_demo123"
+  tenant_b:
+    email: "sarah@globex.com"
+    password: "globex_secret_456"
+    primary_widget_id: "wgt_globex789"
+
+# Probes Tested & Passing
+probes:
+  probe_1: "Cross-origin submission from second origin -> stored 201, visible in dashboard"
+  probe_2: "Malformed and oversized payloads -> clean 4xx JSON errors, never 500"
+  probe_3: "Burst rate limiting -> 429s appear, normal requests succeed"
+  probe_4: "Geo enrichment fallback chain: Provider A -> Provider B -> Degraded success"
+  probe_5: "Safe side effects: Notification failure caught, submission still stored"
+  probe_6: "Honeypot anti-spam: Hidden field filled -> flagged as spam, filtered from clean leads"
