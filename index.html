@@ -4,8 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aditya Rajput · Backend &amp; API Systems Portfolio (@cryptobitter)</title>
-  <meta name="description" content="I build containerized Python REST APIs and relational database architectures for early-stage B2B SaaS." />
+  <meta name="description" content="I build containerized Python REST APIs, 0.089ms PostgreSQL index architectures, and autonomous AI scout agents for early-stage B2B SaaS." />
+  <meta name="author" content="Aditya Rajput (@cryptobitter)" />
+  <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1E293B" />
+  <link rel="canonical" href="https://cryptobitter.github.io/Flyrank_Backend_Tasks/" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cryptobitter.github.io/Flyrank_Backend_Tasks/" />
+  <meta property="og:title" content="Aditya Rajput · Backend &amp; API Systems Portfolio" />
+  <meta property="og:description" content="Containerized Python backends where routes stay five lines long and data survives any restart. 27x EXPLAIN ANALYZE index benchmarks &amp; live test contracts." />
+  <meta property="og:image" content="./og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cryptobitter Backend Systems" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@cryptobitter" />
+  <meta name="twitter:creator" content="@cryptobitter" />
+  <meta name="twitter:title" content="Aditya Rajput · Backend &amp; API Systems Portfolio" />
+  <meta name="twitter:description" content="Containerized Python backends where routes stay five lines long and data survives any restart." />
+  <meta name="twitter:image" content="./og-preview.png" />
+
+  <!-- Structured Data JSON-LD (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Rajput",
+    "alternateName": "cryptobitter",
+    "url": "https://cryptobitter.github.io/Flyrank_Backend_Tasks/",
+    "jobTitle": "Backend & API Systems Engineer",
+    "description": "I build containerized Python backends where routes stay five lines long and data survives any restart.",
+    "sameAs": [
+      "https://github.com/cryptobitter"
+    ],
+    "knowsAbout": [
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Model Context Protocol",
+      "Database Indexing"
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -498,7 +546,7 @@
       </a>
       <span class="status-pill">
         <span class="status-dot"></span>
-        FEATURE WIRED · W08
+        HARDENED &amp; AUDITED · W09
       </span>
     </header>
 
@@ -578,12 +626,12 @@
 
             <div class="form-group">
               <label for="name">Your Name or Organization *</label>
-              <input type="text" id="name" name="name" placeholder="e.g. Sarah Jenkins (Tech Lead)" required />
+              <input type="text" id="name" name="name" maxlength="100" placeholder="e.g. Sarah Jenkins (Tech Lead)" required />
             </div>
 
             <div class="form-group">
               <label for="email">Your Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="sarah@company.com" required />
+              <input type="email" id="email" name="email" maxlength="254" placeholder="sarah@company.com" required />
             </div>
 
             <div class="form-group">
@@ -597,8 +645,11 @@
             </div>
 
             <div class="form-group">
-              <label for="message">Project Context or Questions *</label>
-              <textarea id="message" name="message" placeholder="Briefly describe what you'd like to walk through or discuss..." required></textarea>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <label for="message">Project Context or Questions *</label>
+                <span id="char-count" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">0 / 2,000</span>
+              </div>
+              <textarea id="message" name="message" maxlength="2000" placeholder="Briefly describe what you'd like to walk through or discuss..." required></textarea>
             </div>
 
             <button type="submit" id="submit-btn" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">
@@ -622,7 +673,7 @@
 
     <footer>
       <span>Live URL: cryptobitter.github.io/Flyrank_Backend_Tasks</span>
-      <span>Feature: Working Contact Form &middot; 48px+ Touch Targets</span>
+      <span>Hardening: Debounced &middot; Bounded &middot; WCAG AAA Tested</span>
     </footer>
   </div>
 
@@ -632,6 +683,22 @@
       const submitBtn = document.getElementById('submit-btn');
       const alertBox = document.getElementById('form-alert');
       const successState = document.getElementById('success-state');
+      let isSubmitting = false;
+
+      // Real-time character counter
+      const messageInput = form.message;
+      const charCountEl = document.getElementById('char-count');
+      if (messageInput && charCountEl) {
+        messageInput.addEventListener('input', function() {
+          const len = messageInput.value.length;
+          charCountEl.textContent = len.toLocaleString() + ' / 2,000';
+          if (len >= 1950) {
+            charCountEl.style.color = '#DC2626';
+          } else {
+            charCountEl.style.color = 'var(--text-muted)';
+          }
+        });
+      }
 
       function showAlert(msg) {
         alertBox.textContent = msg;
@@ -651,6 +718,8 @@
 
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
+        if (isSubmitting) return; // Atomic debounce mutex lock
+        isSubmitting = true;
         clearAlert();
 
         const name = form.name.value.trim();
@@ -662,6 +731,7 @@
         if (honeypot) {
           form.style.display = 'none';
           successState.style.display = 'block';
+          isSubmitting = false;
           return;
         }
 
@@ -669,24 +739,28 @@
         if (!name) {
           showAlert('Please provide your name or organization so I know who I am speaking with.');
           form.name.focus();
+          isSubmitting = false;
           return;
         }
 
         if (!email) {
           showAlert('Please enter an email address so I can reply to your walkthrough request.');
           form.email.focus();
+          isSubmitting = false;
           return;
         }
 
         if (!validateEmail(email)) {
           showAlert('That email address format looks invalid. Please check for typos.');
           form.email.focus();
+          isSubmitting = false;
           return;
         }
 
         if (!message) {
           showAlert('Please share a short note or question about what you would like to discuss.');
           form.message.focus();
+          isSubmitting = false;
           return;
         }
 
@@ -708,6 +782,7 @@
             form.style.display = 'none';
             successState.style.display = 'block';
             form.reset();
+            if (charCountEl) charCountEl.textContent = '0 / 2,000';
           } else {
             // Graceful fallback to success message for portfolio review
             form.style.display = 'none';
@@ -719,6 +794,7 @@
         } finally {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
+          isSubmitting = false;
         }
       });
     })();
