@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FlyRank AI Systems//Aditya Rajput Portfolio Maintenance//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portfolio-case-study-update-20261115@aditya-rajput-backend.netlify.app
+DTSTAMP:20261020T081500Z
+DTSTART:20261115T090000Z
+DTEND:20261115T100000Z
+RRULE:FREQ=MONTHLY;BYDAY=1SU;INTERVAL=1
+SUMMARY:Portfolio Maintenance Habit: Ship Case Study #4 to Live Site
+DESCRIPTION:Bi-weekly/monthly portfolio cadence.\n\nObjective: Prevent the portfolio from becoming a stale class artifact by publishing the next real backend deliverable: "Asynchronous PDF Report Pipeline & Artifact Handling (A7 Job Pattern)".\n\nChecklist:\n1. Open Claude Project "Aditya Rajput Portfolio Engine" (pre-loaded with Identity Kit, Voice Card, and Tokens).\n2. Feed the raw 3-Beat facts: Problem (sync PDF timeouts), Decision (HTTP 202 async worker + ReportLab NumberedCanvas + Store-and-link), Proof (10/10 Pytest, 0.84s compile, 85.9KB PDF).\n3. Copy generated HTML snippet into index.html slot grid.\n4. Verify 48px touch targets & WCAG AA contrast.\n5. Git commit & push live to Netlify/GitHub Pages.
+LOCATION:Local Workspace / GitHub cryptobitter/Flyrank_Backend_Tasks
+STATUS:CONFIRMED
+PRIORITY:1
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Upcoming: Portfolio Case Study Sprint Update
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Add your latest backend case study to your portfolio
+END:VALARM
+END:VEVENT
+END:VCALENDAR
