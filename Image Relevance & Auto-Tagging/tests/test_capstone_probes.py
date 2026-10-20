@@ -58,8 +58,16 @@ def test_probe_1_batch_ingestion_and_low_confidence_flagging():
     job_id = res.json()["job"]["job_id"]
 
     # Poll status until complete
-    status_res = client.get(f"/api/v1/images/batch-status/{job_id}")
-    assert status_res.status_code == 200
+    import time
+    completed = False
+    for _ in range(100):
+        status_res = client.get(f"/api/v1/images/batch-status/{job_id}")
+        assert status_res.status_code == 200
+        if status_res.json()["job"]["status"] == "COMPLETED":
+            completed = True
+            break
+        time.sleep(0.05)
+    assert completed, "Batch ingestion job did not complete in time"
 
     # Query all images from database
     images_res = client.get("/api/v1/images?limit=100")
