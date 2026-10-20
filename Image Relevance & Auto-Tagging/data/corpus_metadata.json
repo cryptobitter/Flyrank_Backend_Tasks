@@ -1,765 +1,765 @@
-[
-  {
-    "id": "fox_01",
-    "filename": "fox_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_01.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "A wild red fox standing alert in a temperate forest",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_02",
-    "filename": "fox_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_02.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "A European red fox (Vulpes vulpes) hunting in autumn woodland",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_03",
-    "filename": "fox_03.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_03.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "A young red fox curled up in tall grass",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_04",
-    "filename": "fox_04.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_04.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "Close-up of a red fox with vibrant orange coat and white chest",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_05",
-    "filename": "fox_05.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_05.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "A red fox trotting through snowy pine trees",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_06",
-    "filename": "fox_06.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_06.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "Red fox foraging along the forest edge at dusk",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_07",
-    "filename": "fox_07.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_07.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "An urban red fox peering through leafy underbrush",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "fox_08",
-    "filename": "fox_08.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\fox_08.jpg",
-    "subject": "red fox",
-    "category": "animal",
-    "attributes": [
-      "orange fur",
-      "bushy tail",
-      "wild",
-      "forest",
-      "Vulpes vulpes"
-    ],
-    "caption": "A red fox family playing near their woodland den",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_01",
-    "filename": "wolf_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_01.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "A gray wolf standing atop a rocky ridge in winter",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_02",
-    "filename": "wolf_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_02.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "Timber wolf (Canis lupus) leading its pack through northern tundra",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_03",
-    "filename": "wolf_03.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_03.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "Portrait of an arctic wolf with piercing yellow eyes",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_04",
-    "filename": "wolf_04.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_04.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "A lone gray wolf howling in a pine wilderness",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_05",
-    "filename": "wolf_05.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_05.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "Two gray wolves resting together in the snow",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_06",
-    "filename": "wolf_06.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_06.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "A gray wolf stalking prey through dense boreal forest",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_07",
-    "filename": "wolf_07.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_07.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "Alpha gray wolf patrolling pack territory boundaries",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "wolf_08",
-    "filename": "wolf_08.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\wolf_08.jpg",
-    "subject": "gray wolf",
-    "category": "animal",
-    "attributes": [
-      "gray coat",
-      "pack predator",
-      "wild",
-      "snow",
-      "Canis lupus"
-    ],
-    "caption": "A gray wolf drinking from a frozen mountain creek",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_01",
-    "filename": "dog_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_01.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "A friendly golden retriever dog sitting on a sunny lawn",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_02",
-    "filename": "dog_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_02.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "Domestic retriever fetching a yellow tennis ball in the park",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_03",
-    "filename": "dog_03.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_03.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "A happy golden dog smiling with tongue out",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_04",
-    "filename": "dog_04.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_04.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "Family dog resting comfortably on a living room rug",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_05",
-    "filename": "dog_05.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_05.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "A golden retriever puppy exploring the garden",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_06",
-    "filename": "dog_06.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_06.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "A domestic pet dog playing with children outdoors",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_07",
-    "filename": "dog_07.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_07.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "Golden retriever waiting loyally beside its owner",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "dog_08",
-    "filename": "dog_08.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\dog_08.jpg",
-    "subject": "golden retriever",
-    "category": "animal",
-    "attributes": [
-      "golden fur",
-      "domestic canine",
-      "friendly pet",
-      "yard",
-      "Canis familiaris"
-    ],
-    "caption": "A fluffy retriever swimming in a calm lake",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_01",
-    "filename": "bear_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_01.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "A massive grizzly bear catching salmon at a river waterfall",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_02",
-    "filename": "bear_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_02.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "North American brown bear (Ursus arctos) wandering through subalpine meadow",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_03",
-    "filename": "bear_03.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_03.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "A female grizzly bear protecting two small cubs in Alaskan wilderness",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_04",
-    "filename": "bear_04.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_04.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "Grizzly bear foraging for summer berries along a creek",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_05",
-    "filename": "bear_05.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_05.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "Large brown bear digging roots in the autumn hillside",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_06",
-    "filename": "bear_06.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_06.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "Grizzly bear standing tall on hind legs in the river",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_07",
-    "filename": "bear_07.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_07.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "A coastal brown bear shaking water from its heavy coat",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "bear_08",
-    "filename": "bear_08.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\bear_08.jpg",
-    "subject": "grizzly bear",
-    "category": "animal",
-    "attributes": [
-      "brown fur",
-      "large mammal",
-      "river",
-      "salmon",
-      "Ursus arctos"
-    ],
-    "caption": "Grizzly bear walking through misty evergreen valley",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_01",
-    "filename": "deer_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_01.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "A white-tailed deer buck with large antlers standing in a meadow",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_02",
-    "filename": "deer_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_02.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "Mother deer with twin spotted fawns in morning sunlight",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_03",
-    "filename": "deer_03.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_03.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "A cautious doe looking over its shoulder in a deciduous grove",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_04",
-    "filename": "deer_04.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_04.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "White-tailed buck leaping across a countryside stone wall",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_05",
-    "filename": "deer_05.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_05.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "Deer grazing peaceful wildflowers at sunrise",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_06",
-    "filename": "deer_06.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_06.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "A graceful white-tailed deer drinking at a forest stream",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_07",
-    "filename": "deer_07.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_07.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "Buck in autumn foliage displaying velvet antlers",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "deer_08",
-    "filename": "deer_08.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\deer_08.jpg",
-    "subject": "white-tailed deer",
-    "category": "animal",
-    "attributes": [
-      "antlers",
-      "herbivore",
-      "meadow",
-      "grazing",
-      "Odocoileus virginianus"
-    ],
-    "caption": "Deer family moving quietly through winter birch woods",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "tech_01",
-    "filename": "tech_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\tech_01.jpg",
-    "subject": "cloud datacenter",
-    "category": "technology",
-    "attributes": [
-      "server rack",
-      "network cables",
-      "LEDs",
-      "infrastructure",
-      "cloud computing"
-    ],
-    "caption": "Rows of illuminated server racks in a modern enterprise datacenter",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "tech_02",
-    "filename": "tech_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\tech_02.jpg",
-    "subject": "cloud datacenter",
-    "category": "technology",
-    "attributes": [
-      "server rack",
-      "network cables",
-      "LEDs",
-      "infrastructure",
-      "cloud computing"
-    ],
-    "caption": "High-speed fiber optic networking cables connected to switchboard",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "tech_03",
-    "filename": "tech_03.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\tech_03.jpg",
-    "subject": "cloud datacenter",
-    "category": "technology",
-    "attributes": [
-      "server rack",
-      "network cables",
-      "LEDs",
-      "infrastructure",
-      "cloud computing"
-    ],
-    "caption": "Cloud computing server room with blue LED status indicators",
-    "confidence": 0.94,
-    "flagged_for_review": false
-  },
-  {
-    "id": "blurry_01",
-    "filename": "blurry_01.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\blurry_01.jpg",
-    "subject": "unclear shadow",
-    "category": "unclassified",
-    "attributes": [
-      "blurry",
-      "low light",
-      "heavy noise",
-      "indistinct"
-    ],
-    "caption": "An indistinct dark shape heavily obscured by thick fog and camera blur",
-    "confidence": 0.45,
-    "flagged_for_review": true
-  },
-  {
-    "id": "blurry_02",
-    "filename": "blurry_02.jpg",
-    "file_path": "C:\\Users\\2k24c\\.gemini\\antigravity\\brain\\a12b5ac4-630c-4f93-a45e-484855391cbb\\scratch\\repo_clone\\Image Relevance & Auto-Tagging\\data\\images\\blurry_02.jpg",
-    "subject": "unclear shadow",
-    "category": "unclassified",
-    "attributes": [
-      "blurry",
-      "low light",
-      "heavy noise",
-      "indistinct"
-    ],
-    "caption": "Underexposed grainy silhouette with severe motion blur and no clear features",
-    "confidence": 0.45,
-    "flagged_for_review": true
-  }
+﻿[
+    {
+        "id":  "fox_01",
+        "filename":  "fox_01.jpg",
+        "file_path":  "data/images/fox_01.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "A wild red fox standing alert in a temperate forest",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_02",
+        "filename":  "fox_02.jpg",
+        "file_path":  "data/images/fox_02.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "A European red fox (Vulpes vulpes) hunting in autumn woodland",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_03",
+        "filename":  "fox_03.jpg",
+        "file_path":  "data/images/fox_03.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "A young red fox curled up in tall grass",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_04",
+        "filename":  "fox_04.jpg",
+        "file_path":  "data/images/fox_04.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "Close-up of a red fox with vibrant orange coat and white chest",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_05",
+        "filename":  "fox_05.jpg",
+        "file_path":  "data/images/fox_05.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "A red fox trotting through snowy pine trees",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_06",
+        "filename":  "fox_06.jpg",
+        "file_path":  "data/images/fox_06.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "Red fox foraging along the forest edge at dusk",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_07",
+        "filename":  "fox_07.jpg",
+        "file_path":  "data/images/fox_07.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "An urban red fox peering through leafy underbrush",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "fox_08",
+        "filename":  "fox_08.jpg",
+        "file_path":  "data/images/fox_08.jpg",
+        "subject":  "red fox",
+        "category":  "animal",
+        "attributes":  [
+                           "orange fur",
+                           "bushy tail",
+                           "wild",
+                           "forest",
+                           "Vulpes vulpes"
+                       ],
+        "caption":  "A red fox family playing near their woodland den",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_01",
+        "filename":  "wolf_01.jpg",
+        "file_path":  "data/images/wolf_01.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "A gray wolf standing atop a rocky ridge in winter",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_02",
+        "filename":  "wolf_02.jpg",
+        "file_path":  "data/images/wolf_02.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "Timber wolf (Canis lupus) leading its pack through northern tundra",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_03",
+        "filename":  "wolf_03.jpg",
+        "file_path":  "data/images/wolf_03.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "Portrait of an arctic wolf with piercing yellow eyes",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_04",
+        "filename":  "wolf_04.jpg",
+        "file_path":  "data/images/wolf_04.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "A lone gray wolf howling in a pine wilderness",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_05",
+        "filename":  "wolf_05.jpg",
+        "file_path":  "data/images/wolf_05.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "Two gray wolves resting together in the snow",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_06",
+        "filename":  "wolf_06.jpg",
+        "file_path":  "data/images/wolf_06.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "A gray wolf stalking prey through dense boreal forest",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_07",
+        "filename":  "wolf_07.jpg",
+        "file_path":  "data/images/wolf_07.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "Alpha gray wolf patrolling pack territory boundaries",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "wolf_08",
+        "filename":  "wolf_08.jpg",
+        "file_path":  "data/images/wolf_08.jpg",
+        "subject":  "gray wolf",
+        "category":  "animal",
+        "attributes":  [
+                           "gray coat",
+                           "pack predator",
+                           "wild",
+                           "snow",
+                           "Canis lupus"
+                       ],
+        "caption":  "A gray wolf drinking from a frozen mountain creek",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_01",
+        "filename":  "dog_01.jpg",
+        "file_path":  "data/images/dog_01.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "A friendly golden retriever dog sitting on a sunny lawn",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_02",
+        "filename":  "dog_02.jpg",
+        "file_path":  "data/images/dog_02.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "Domestic retriever fetching a yellow tennis ball in the park",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_03",
+        "filename":  "dog_03.jpg",
+        "file_path":  "data/images/dog_03.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "A happy golden dog smiling with tongue out",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_04",
+        "filename":  "dog_04.jpg",
+        "file_path":  "data/images/dog_04.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "Family dog resting comfortably on a living room rug",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_05",
+        "filename":  "dog_05.jpg",
+        "file_path":  "data/images/dog_05.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "A golden retriever puppy exploring the garden",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_06",
+        "filename":  "dog_06.jpg",
+        "file_path":  "data/images/dog_06.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "A domestic pet dog playing with children outdoors",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_07",
+        "filename":  "dog_07.jpg",
+        "file_path":  "data/images/dog_07.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "Golden retriever waiting loyally beside its owner",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "dog_08",
+        "filename":  "dog_08.jpg",
+        "file_path":  "data/images/dog_08.jpg",
+        "subject":  "golden retriever",
+        "category":  "animal",
+        "attributes":  [
+                           "golden fur",
+                           "domestic canine",
+                           "friendly pet",
+                           "yard",
+                           "Canis familiaris"
+                       ],
+        "caption":  "A fluffy retriever swimming in a calm lake",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_01",
+        "filename":  "bear_01.jpg",
+        "file_path":  "data/images/bear_01.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "A massive grizzly bear catching salmon at a river waterfall",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_02",
+        "filename":  "bear_02.jpg",
+        "file_path":  "data/images/bear_02.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "North American brown bear (Ursus arctos) wandering through subalpine meadow",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_03",
+        "filename":  "bear_03.jpg",
+        "file_path":  "data/images/bear_03.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "A female grizzly bear protecting two small cubs in Alaskan wilderness",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_04",
+        "filename":  "bear_04.jpg",
+        "file_path":  "data/images/bear_04.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "Grizzly bear foraging for summer berries along a creek",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_05",
+        "filename":  "bear_05.jpg",
+        "file_path":  "data/images/bear_05.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "Large brown bear digging roots in the autumn hillside",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_06",
+        "filename":  "bear_06.jpg",
+        "file_path":  "data/images/bear_06.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "Grizzly bear standing tall on hind legs in the river",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_07",
+        "filename":  "bear_07.jpg",
+        "file_path":  "data/images/bear_07.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "A coastal brown bear shaking water from its heavy coat",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "bear_08",
+        "filename":  "bear_08.jpg",
+        "file_path":  "data/images/bear_08.jpg",
+        "subject":  "grizzly bear",
+        "category":  "animal",
+        "attributes":  [
+                           "brown fur",
+                           "large mammal",
+                           "river",
+                           "salmon",
+                           "Ursus arctos"
+                       ],
+        "caption":  "Grizzly bear walking through misty evergreen valley",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_01",
+        "filename":  "deer_01.jpg",
+        "file_path":  "data/images/deer_01.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "A white-tailed deer buck with large antlers standing in a meadow",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_02",
+        "filename":  "deer_02.jpg",
+        "file_path":  "data/images/deer_02.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "Mother deer with twin spotted fawns in morning sunlight",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_03",
+        "filename":  "deer_03.jpg",
+        "file_path":  "data/images/deer_03.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "A cautious doe looking over its shoulder in a deciduous grove",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_04",
+        "filename":  "deer_04.jpg",
+        "file_path":  "data/images/deer_04.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "White-tailed buck leaping across a countryside stone wall",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_05",
+        "filename":  "deer_05.jpg",
+        "file_path":  "data/images/deer_05.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "Deer grazing peaceful wildflowers at sunrise",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_06",
+        "filename":  "deer_06.jpg",
+        "file_path":  "data/images/deer_06.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "A graceful white-tailed deer drinking at a forest stream",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_07",
+        "filename":  "deer_07.jpg",
+        "file_path":  "data/images/deer_07.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "Buck in autumn foliage displaying velvet antlers",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "deer_08",
+        "filename":  "deer_08.jpg",
+        "file_path":  "data/images/deer_08.jpg",
+        "subject":  "white-tailed deer",
+        "category":  "animal",
+        "attributes":  [
+                           "antlers",
+                           "herbivore",
+                           "meadow",
+                           "grazing",
+                           "Odocoileus virginianus"
+                       ],
+        "caption":  "Deer family moving quietly through winter birch woods",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "tech_01",
+        "filename":  "tech_01.jpg",
+        "file_path":  "data/images/tech_01.jpg",
+        "subject":  "cloud datacenter",
+        "category":  "technology",
+        "attributes":  [
+                           "server rack",
+                           "network cables",
+                           "LEDs",
+                           "infrastructure",
+                           "cloud computing"
+                       ],
+        "caption":  "Rows of illuminated server racks in a modern enterprise datacenter",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "tech_02",
+        "filename":  "tech_02.jpg",
+        "file_path":  "data/images/tech_02.jpg",
+        "subject":  "cloud datacenter",
+        "category":  "technology",
+        "attributes":  [
+                           "server rack",
+                           "network cables",
+                           "LEDs",
+                           "infrastructure",
+                           "cloud computing"
+                       ],
+        "caption":  "High-speed fiber optic networking cables connected to switchboard",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "tech_03",
+        "filename":  "tech_03.jpg",
+        "file_path":  "data/images/tech_03.jpg",
+        "subject":  "cloud datacenter",
+        "category":  "technology",
+        "attributes":  [
+                           "server rack",
+                           "network cables",
+                           "LEDs",
+                           "infrastructure",
+                           "cloud computing"
+                       ],
+        "caption":  "Cloud computing server room with blue LED status indicators",
+        "confidence":  0.94,
+        "flagged_for_review":  false
+    },
+    {
+        "id":  "blurry_01",
+        "filename":  "blurry_01.jpg",
+        "file_path":  "data/images/blurry_01.jpg",
+        "subject":  "unclear shadow",
+        "category":  "unclassified",
+        "attributes":  [
+                           "blurry",
+                           "low light",
+                           "heavy noise",
+                           "indistinct"
+                       ],
+        "caption":  "An indistinct dark shape heavily obscured by thick fog and camera blur",
+        "confidence":  0.45,
+        "flagged_for_review":  true
+    },
+    {
+        "id":  "blurry_02",
+        "filename":  "blurry_02.jpg",
+        "file_path":  "data/images/blurry_02.jpg",
+        "subject":  "unclear shadow",
+        "category":  "unclassified",
+        "attributes":  [
+                           "blurry",
+                           "low light",
+                           "heavy noise",
+                           "indistinct"
+                       ],
+        "caption":  "Underexposed grainy silhouette with severe motion blur and no clear features",
+        "confidence":  0.45,
+        "flagged_for_review":  true
+    }
 ]
