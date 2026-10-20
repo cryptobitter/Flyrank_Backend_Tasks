@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-10-20T06:33:40Z",
+  "checkpoint": "Plant Your Flag: Domain + Badge",
+  "live_domain": "https://aditya-rajput-backend.netlify.app",
+  "fallback_domain": "https://cryptobitter.github.io/Flyrank_Backend_Tasks/",
+  "checks": [
+    {
+      "id": "CHK-01",
+      "name": "Live Clean Domain & HTTPS Configuration",
+      "status": "PASS",
+      "details": "Production URL https://aditya-rajput-backend.netlify.app configured over automated HTTPS."
+    },
+    {
+      "id": "CHK-02",
+      "name": "Free Analytics Installation (Cloudflare Web Analytics)",
+      "status": "PASS",
+      "details": "Cloudflare Web Analytics beacon script installed in <head> (Zero-Cookie, GDPR compliant)."
+    },
+    {
+      "id": "CHK-03",
+      "name": "FlyRank Graduate Badge in Footer",
+      "status": "PASS",
+      "details": "Official Banner-style Graduate Badge installed in footer with active link to verification portal."
+    },
+    {
+      "id": "CHK-04",
+      "name": "Page Title Hygiene",
+      "status": "PASS",
+      "details": "Page Title verified: 'Aditya Rajput \u00b7 Backend &amp; API Systems Portfolio (@cryptobitter)'"
+    },
+    {
+      "id": "CHK-05",
+      "name": "Favicon Resolution",
+      "status": "PASS",
+      "details": "Vector favicon.svg exists on disk and is linked with correct SVG mime type."
+    },
+    {
+      "id": "CHK-06",
+      "name": "Social Share Preview Card",
+      "status": "PASS",
+      "details": "1200x630px high-resolution og-preview.png verified on disk and declared in <head>."
+    }
+  ]
+}
