@@ -36,7 +36,7 @@
       <nav class="nav-links" id="navMenu">
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#badge" class="nav-link">Certification</a>
+        <a href="#credentials" class="nav-link">Credentials</a>
         <a href="#dns" class="nav-link">DNS Guide</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -180,16 +180,90 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Featured Work</span>
-          <h2 class="section-title">Selected Projects &amp; Core Deliverables</h2>
-          <p class="section-description">Real systems built during FlyRank and university open source leadership.</p>
+          <h2 class="section-title">Selected Projects &amp; Core Systems</h2>
+          <p class="section-description">High-impact engineering systems, production platforms, and AI workflows.</p>
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1 -->
+          <!-- Project 1: NAYAY AI -->
           <article class="project-card">
-            <div class="project-header">
-              <span class="project-badge live-badge">Live in Production</span>
-              <span class="project-num">01</span>
+            <div class="project-card-header">
+              <span class="project-badge badge-live">LIVE DEMO</span>
+              <span class="project-card-num">01</span>
+            </div>
+            <h3 class="project-title">NAYAY AI — Legal Clause Explainer</h3>
+            <p class="project-description">
+              AI-powered legal contract clause explainer and risk assessment engine. Analyzes lease and employment agreements, parses risky clauses against statutory Indian law, and generates bilingual (English/Hindi) simplified breakdowns.
+            </p>
+            <div class="project-tags">
+              <span>React 18</span>
+              <span>TypeScript</span>
+              <span>FastAPI</span>
+              <span>AI Clause Parsing</span>
+              <span>Bilingual (EN/HI)</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://nayay-ai-legal-clause-explainer.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: FRACTOES -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-badge badge-team">TEAM PROJECT · BACKEND LEAD</span>
+              <span class="project-card-num">02</span>
+            </div>
+            <h3 class="project-title">FRACTOES — AI Bone Fracture Detection &amp; Clinical Co-Pilot</h3>
+            <p class="project-description">
+              Clinical co-pilot detecting bone fractures with 98.62% test accuracy via ResNet18 and Grad-CAM visual heatmaps. Synthesizes preliminary radiology narratives via xAI Grok-4-Fast with downloadable ReportLab clinical PDFs.
+            </p>
+            <div class="project-tags">
+              <span>FastAPI</span>
+              <span>PyTorch (ResNet18)</span>
+              <span>Grad-CAM</span>
+              <span>xAI Grok</span>
+              <span>Supabase</span>
+              <span>React 19</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://fractoes.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: NIRNAY -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-badge badge-hackathon">HACKATHON PROJECT</span>
+              <span class="project-card-num">03</span>
+            </div>
+            <h3 class="project-title">NIRNAY — Blockchain-Anchored AI Policy Auditor</h3>
+            <p class="project-description">
+              Institutional policy compliance engine answering regulatory questions grounded in uploaded documents via LlamaIndex RAG and Claude. Anchors decision hash audit trails permanently on the Polygon blockchain for tamper-proof verification.
+            </p>
+            <div class="project-tags">
+              <span>FastAPI</span>
+              <span>Claude Sonnet</span>
+              <span>LlamaIndex RAG</span>
+              <span>Solidity</span>
+              <span>Polygon Amoy</span>
+              <span>Supabase</span>
+            </div>
+            <div class="project-actions">
+              <!-- Note: NIRNAY stays HACKATHON PROJECT with no demo button per specification -->
+            </div>
+          </article>
+
+          <!-- Project 4: Hacktoberfest Tracking & Repository Hub -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-badge badge-default">OPEN SOURCE</span>
+              <span class="project-card-num">04</span>
             </div>
             <h3 class="project-title">Hacktoberfest Tracking &amp; Repository Hub</h3>
             <p class="project-description">
@@ -199,25 +273,25 @@
               <span>Next.js / React</span>
               <span>GitHub API</span>
               <span>Vercel Edge</span>
-              <span>Open Source</span>
+              <span>Community Lead</span>
             </div>
-            <div class="project-footer">
-              <a href="https://hacktober-tracking-system-ocai.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <div class="project-actions">
+              <a href="https://hacktober-tracking-system-ocai.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-repo">
                 <span>Live App</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               </a>
-              <a href="https://github.com/PSIT-GDGOC/hacktoberfest-web" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+              <a href="https://github.com/PSIT-GDGOC/hacktoberfest-web" target="_blank" rel="noopener noreferrer" class="btn-repo">
                 <span>Source Code</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               </a>
             </div>
           </article>
 
-          <!-- Project 2 -->
+          <!-- Project 5: The Polite Scraper -->
           <article class="project-card">
-            <div class="project-header">
-              <span class="project-badge engineering-badge">Data Engineering</span>
-              <span class="project-num">02</span>
+            <div class="project-card-header">
+              <span class="project-badge badge-default">DATA SYSTEMS</span>
+              <span class="project-card-num">05</span>
             </div>
             <h3 class="project-title">The Polite Scraper</h3>
             <p class="project-description">
@@ -229,23 +303,23 @@
               <span>Pydantic v2</span>
               <span>Ethical Scraper</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/the%20polite%20scraper" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+            <div class="project-actions">
+              <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/the%20polite%20scraper" target="_blank" rel="noopener noreferrer" class="btn-repo">
                 <span>View Repository</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               </a>
             </div>
           </article>
 
-          <!-- Project 3 -->
+          <!-- Project 6: Ship an Automation Workflow v2 -->
           <article class="project-card">
-            <div class="project-header">
-              <span class="project-badge ai-badge">AI Systems</span>
-              <span class="project-num">03</span>
+            <div class="project-card-header">
+              <span class="project-badge badge-default">WORKFLOW AUTOMATION</span>
+              <span class="project-card-num">06</span>
             </div>
             <h3 class="project-title">Ship an Automation Workflow v2</h3>
             <p class="project-description">
-              End-to-end 4-step research & synthesis pipeline chaining raw technical audits into executive briefs. Evaluated across 5 real production inputs, demonstrating an 84% time reduction compared to manual research while documenting precise human-in-the-loop review criteria.
+              End-to-end 4-step research &amp; synthesis pipeline chaining raw technical audits into executive briefs. Evaluated across 5 real production inputs, demonstrating an 84% time reduction compared to manual research while documenting precise human-in-the-loop review criteria.
             </p>
             <div class="project-tags">
               <span>NotebookLM</span>
@@ -253,8 +327,8 @@
               <span>n8n Pipeline</span>
               <span>Workflow Chaining</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/Ship%20an%20Automation%20Workflow%20v2" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+            <div class="project-actions">
+              <a href="https://github.com/cryptobitter/Flyrank_Backend_Tasks/tree/main/Ship%20an%20Automation%20Workflow%20v2" target="_blank" rel="noopener noreferrer" class="btn-repo">
                 <span>Documentation &amp; Runs</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               </a>
@@ -264,33 +338,190 @@
       </div>
     </section>
 
-    <!-- FlyRank Completion Badge Section -->
-    <section class="badge-section" id="badge">
+    <!-- Credentials & Certifications Section -->
+    <section class="credentials-section" id="credentials" data-anchor="badge">
       <div class="container">
-        <div class="badge-card">
-          <div class="badge-seal-wrapper">
-            <div class="badge-seal">
-              <div class="seal-inner">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 15l-2 5l9-9l-9-9l2 5l-8 4l8 4z"></path>
-                </svg>
-                <span class="seal-text">FLYRANK</span>
+        <div class="section-header">
+          <span class="section-tag">Verified Credentials &amp; Achievements</span>
+          <h2 class="section-title">Credentials, Internships &amp; Achievements</h2>
+          <p class="section-description">
+            Directly verifiable credentials and certificates. Click any certificate to open an accessible full-resolution preview.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- 1. FlyRank Backend AI Engineering -->
+          <article class="credential-card" data-slug="flyrank-backend-ai-engineering">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: FlyRank Backend AI Engineering" data-cert-src="assets/certificates/flyrank-backend-ai-engineering.webp" data-cert-title="FlyRank Backend AI Engineering — Certificate of Completion">
+                <img src="assets/certificates/flyrank-backend-ai-engineering.webp" alt="FlyRank Backend AI Engineering Certificate of Completion for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
+            </div>
+            <div class="credential-content">
+              <span class="credential-issuer">FlyRank.ai</span>
+              <h3 class="credential-title">FlyRank Backend AI Engineering</h3>
+              <p class="credential-meta">Internship Program &bull; Issued 21.10.2026</p>
+              <div class="credential-id-box">
+                <span class="id-label">Credential ID</span>
+                <code class="id-value">FR-D11-3623A-C111A</code>
               </div>
             </div>
-          </div>
-          <div class="badge-content">
-            <span class="section-tag">Program Milestone</span>
-            <h2 class="badge-title">FlyRank Official Completion Badge</h2>
-            <p class="badge-description">
-              As part of the FlyRank Engineering Internship track, this space is dedicated to host the verified 
-              <strong>FlyRank Completion Badge</strong> upon final capstone review and approval. 
-              It stands as recognition of completing core infrastructure, polite data systems, automated workflows, and production deployments.
-            </p>
-            <div class="badge-status-box">
-              <span class="status-indicator pending"></span>
-              <span class="badge-status-label">Status: <strong>Track In Progress (Capstone Phase)</strong></span>
+          </article>
+
+          <!-- 2. FlyRank AI Fluency -->
+          <article class="credential-card" data-slug="flyrank-ai-fluency">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: FlyRank AI Fluency" data-cert-src="assets/certificates/flyrank-ai-fluency.webp" data-cert-title="FlyRank AI Fluency — Certificate of Completion">
+                <img src="assets/certificates/flyrank-ai-fluency.webp" alt="FlyRank AI Fluency Certificate of Completion for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
             </div>
-          </div>
+            <div class="credential-content">
+              <span class="credential-issuer">FlyRank.ai</span>
+              <h3 class="credential-title">FlyRank AI Fluency</h3>
+              <p class="credential-meta">Internship Program &bull; Issued 20.10.2026</p>
+              <div class="credential-id-box">
+                <span class="id-label">Credential ID</span>
+                <code class="id-value">FR-D11-F5AC8-4591C</code>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Walmart Advanced Software Engineering (Forage) -->
+          <article class="credential-card" data-slug="walmart-forage">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: Walmart Advanced Software Engineering Job Simulation" data-cert-src="assets/certificates/walmart-forage.webp" data-cert-title="Walmart Advanced Software Engineering Job Simulation — Certificate of Completion">
+                <img src="assets/certificates/walmart-forage.webp" alt="Walmart Advanced Software Engineering Job Simulation Certificate for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
+            </div>
+            <div class="credential-content">
+              <span class="credential-issuer">Forage &bull; Walmart Global Tech</span>
+              <h3 class="credential-title">Advanced Software Engineering Job Simulation</h3>
+              <p class="credential-meta">Practical Engineering Simulation &bull; Issued August 8, 2026</p>
+              <div class="credential-id-box">
+                <span class="id-label">Credential IDs</span>
+                <code class="id-value">User: 6a736a0186066446596cfb00</code>
+                <code class="id-value">Enrolment: 6a757526c074a0be77eccf28</code>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. IBM Data Analysis with Python -->
+          <article class="credential-card" data-slug="ibm-data-analysis-python">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: Data Analysis with Python (IBM)" data-cert-src="assets/certificates/ibm-data-analysis-python.webp" data-cert-title="IBM Data Analysis with Python — Certificate of Completion">
+                <img src="assets/certificates/ibm-data-analysis-python.webp" alt="IBM Cognitive Class Data Analysis with Python Certificate for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
+            </div>
+            <div class="credential-content">
+              <span class="credential-issuer">IBM / Cognitive Class</span>
+              <h3 class="credential-title">Data Analysis with Python (DA0101EN)</h3>
+              <p class="credential-meta">IBM Developer Skills Network &bull; Issued March 3, 2026</p>
+              <div class="credential-id-box">
+                <span class="id-label">Credential ID</span>
+                <code class="id-value">b1b7124c50c1436ba29871d940308857</code>
+              </div>
+              <div class="credential-actions">
+                <a href="https://courses.cognitiveclass.ai/certificates/b1b7124c50c1436ba29871d940308857" target="_blank" rel="noopener noreferrer" class="verify-link">
+                  <span>Verify</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Anthropic Claude 101 -->
+          <article class="credential-card" data-slug="anthropic-claude-101">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: Claude 101" data-cert-src="assets/certificates/anthropic-claude-101.webp" data-cert-title="Claude 101 — Anthropic Education">
+                <img src="assets/certificates/anthropic-claude-101.webp" alt="Anthropic Claude 101 Certificate of Completion for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
+            </div>
+            <div class="credential-content">
+              <span class="credential-issuer">Anthropic Education</span>
+              <h3 class="credential-title">Claude 101 Certification</h3>
+              <p class="credential-meta">Anthropic AI Curriculum</p>
+            </div>
+          </article>
+
+          <!-- 6. Anthropic AI Fluency -->
+          <article class="credential-card" data-slug="anthropic-ai-fluency">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: AI Fluency For Builders" data-cert-src="assets/certificates/anthropic-ai-fluency.webp" data-cert-title="AI Fluency For Builders — Anthropic Education">
+                <img src="assets/certificates/anthropic-ai-fluency.webp" alt="Anthropic AI Fluency For Builders Certificate for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
+            </div>
+            <div class="credential-content">
+              <span class="credential-issuer">Anthropic Education</span>
+              <h3 class="credential-title">AI Fluency For Builders</h3>
+              <p class="credential-meta">Anthropic AI Curriculum</p>
+            </div>
+          </article>
+
+          <!-- 7. GDGOC PSIT (No certificate image source) -->
+          <article class="credential-card no-media" data-slug="gdgoc-psit">
+            <div class="credential-content">
+              <span class="credential-issuer">GDGOC PSIT</span>
+              <h3 class="credential-title">Google Developer Groups on Campus (GDGOC)</h3>
+              <p class="credential-meta">PSIT Kanpur &bull; Core Contributor &amp; Technical Coordinator</p>
+              <p class="credential-desc">
+                Organized campus tech initiatives, coordinated Hacktoberfest participation, and maintained open source tooling.
+              </p>
+            </div>
+          </article>
+
+          <!-- 8. Build With Bharat 2.0 -->
+          <article class="credential-card" data-slug="buildwithbharat-2">
+            <div class="credential-media">
+              <button type="button" class="cert-thumb-btn" aria-label="Open certificate: Build With Bharat 2.0" data-cert-src="assets/certificates/buildwithbharat-2.webp" data-cert-title="Build With Bharat 2.0 Hackathon Achievement">
+                <img src="assets/certificates/buildwithbharat-2.webp" alt="Build With Bharat 2.0 Hackathon Certificate for Aditya Rajput" loading="lazy" class="cert-thumbnail" />
+                <span class="cert-zoom-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Certificate</span>
+                </span>
+              </button>
+            </div>
+            <div class="credential-content">
+              <span class="credential-issuer">Build With Bharat</span>
+              <h3 class="credential-title">Build With Bharat 2.0 Hackathon</h3>
+              <p class="credential-meta">National Hackathon &bull; Systems Development</p>
+            </div>
+          </article>
+
+          <!-- 9. BBD Hackathon (No certificate image source) -->
+          <article class="credential-card no-media" data-slug="bbd-hackathon">
+            <div class="credential-content">
+              <span class="credential-issuer">BBD University</span>
+              <h3 class="credential-title">BBD Hackathon</h3>
+              <p class="credential-meta">Competitive Hackathon Participant</p>
+              <p class="credential-desc">
+                Prototyped and delivered robust full-stack and backend solutions during competitive hackathon challenges.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -452,6 +683,23 @@
       <div class="modal-footer">
         <button class="btn btn-secondary" id="closeCvModalFooterBtn">Close</button>
         <button class="btn btn-primary" id="copyCvLinkBtn">Copy Portfolio Link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessible Certificate Lightbox Modal -->
+  <div class="lightbox-overlay" id="certLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <h3 id="lightboxTitle" class="lightbox-title">Certificate Preview</h3>
+        <button type="button" class="lightbox-close-btn" id="closeLightboxBtn" aria-label="Close certificate preview">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightboxImage" src="" alt="Certificate Preview" class="lightbox-image" />
+      </div>
+      <div class="lightbox-footer">
+        <span id="lightboxCaption" class="lightbox-caption"></span>
+        <button type="button" class="btn btn-secondary lightbox-close-action" id="closeLightboxFooterBtn">Close Preview (Esc)</button>
       </div>
     </div>
   </div>

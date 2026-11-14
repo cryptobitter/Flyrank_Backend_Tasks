@@ -1,0 +1,17 @@
+{
+  "name": "personal-website-live-on-the-flyrank-domain",
+  "version": "1.0.0",
+  "description": "**Assignment:** PF-04 | Phase: Build (core)   **Track:** FlyRank Engineering Internship   **Author:** Aditya Rajput   **Live URL:** [https://aditya-rajput-backend.netlify.app](https://aditya-rajput-backend.netlify.app)   **Deliverable Document:** [dns-walkthrough.md](dns-walkthrough.md)",
+  "main": "script.js",
+  "scripts": {
+    "convert": "node convert-certificates.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}
